@@ -1,3 +1,9 @@
+/*
+Date: 04/09/2022
+Path: lib\screens\auth\presentation\authentication.dart
+Content: Authentication Page which will collect mobile number from user and send otp 
+to the particular mobile number.
+*/
 import 'package:flutter/material.dart';
 import 'package:now_apps/core/colors.dart';
 import 'package:now_apps/core/constants.dart';
