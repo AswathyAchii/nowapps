@@ -7,6 +7,8 @@ also logout button is there
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:now_apps/core/constants.dart';
+import 'package:now_apps/core/styles.dart';
+import 'package:now_apps/screens/home/widget/logout_dailoge.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -41,21 +43,7 @@ class HomePage extends StatelessWidget {
         showDialog(
           context: context,
           builder: ((context) {
-            return Dialog(
-              child: Container(
-                color: Colors.white,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        height: 84,
-                        color: const Color(0xffD9D9D9),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            );
+            return const LogoutDailog();
           }),
         );
       },
@@ -121,11 +109,7 @@ class HomePage extends StatelessWidget {
       ),
       child: Text(
         "Store List",
-        style: GoogleFonts.redHatDisplay(
-          fontSize: 40,
-          fontWeight: FontWeight.w800,
-          color: Colors.black,
-        ),
+        style: homeHeadingstyle,
       ),
     );
   }
