@@ -22,3 +22,16 @@ TextStyle verificationSubHeadingstyle = GoogleFonts.redHatDisplay(
   fontWeight: FontWeight.w300,
   color: Colors.black,
 );
+
+// -----------------  Home -------------- //
+
+TextStyle homeHeadingstyle = GoogleFonts.redHatDisplay(
+  fontSize: 40,
+  fontWeight: FontWeight.w800,
+  color: Colors.black,
+);
+
+TextStyle mobilNumberpopUpStyle = GoogleFonts.redHatDisplay(
+  fontSize: 15,
+  fontWeight: FontWeight.w400,
+);
