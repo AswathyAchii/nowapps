@@ -5,8 +5,21 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
+    return Scaffold(
+      appBar: AppBar(actions: const [
+        Icon(
+          Icons.person_remove,
+          color: Color(0xff4F4D4D),
+          size: 27,
+        )
+      ]),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Row(),
+          ],
+        ),
+      ),
     );
   }
 }
