@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:now_apps/screens/auth/application/authentication_bloc.dart';
 import 'package:now_apps/screens/auth/presentation/authentication.dart';
 
 class AppWidget extends StatelessWidget {
@@ -6,9 +8,16 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<AuthenticationBloc>(
+          create: (BuildContext context) => AuthenticationBloc(),
+        ),
+      ],
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Authentication(),
+      ),
     );
   }
 }
