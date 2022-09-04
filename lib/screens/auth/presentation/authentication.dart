@@ -1,3 +1,8 @@
+/*
+Date: 04/09/2022
+Path: lib\screens\auth\presentation\authentication.dart
+Content: page which decide to display whether to get mobile number or verify otp
+*/
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:now_apps/screens/auth/application/authentication_bloc.dart';

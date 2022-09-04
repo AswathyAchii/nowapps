@@ -21,7 +21,7 @@ class AuthenticationBloc
     });
     on<_ResendOtp>((event, emit) {
       state.otpTimercontroller.loading();
-      Future.delayed(const Duration(seconds: 6), () {
+      Future.delayed(const Duration(seconds: 60), () {
         state.otpTimercontroller.startTimer();
       });
     });
