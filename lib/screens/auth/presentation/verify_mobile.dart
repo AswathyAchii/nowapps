@@ -8,7 +8,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:now_apps/core/colors.dart';
 import 'package:now_apps/core/constants.dart';
 import 'package:now_apps/core/styles.dart';
+import 'package:now_apps/router/router.dart';
 import 'package:now_apps/screens/auth/application/authentication_bloc.dart';
+import 'package:now_apps/screens/home/presentation/home.dart';
 import 'package:otp_timer_button/otp_timer_button.dart';
 import 'package:pinput/pinput.dart';
 
@@ -102,6 +104,12 @@ class VerifyOTP extends StatelessWidget {
         context
             .read<AuthenticationBloc>()
             .add(const AuthenticationEvent.otpSendOrNot(otpSendOrNot: false));
+        Navigator.pushReplacement(
+            context,
+            FadePageRoute(
+                widget: const HomePage(),
+                alignment: Alignment.bottomCenter,
+                curve: Curves.ease));
       },
       child: Padding(
         padding: const EdgeInsets.only(
