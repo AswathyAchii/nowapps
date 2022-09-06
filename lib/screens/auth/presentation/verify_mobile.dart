@@ -10,6 +10,7 @@ import 'package:now_apps/core/constants.dart';
 import 'package:now_apps/core/styles.dart';
 import 'package:now_apps/router/router.dart';
 import 'package:now_apps/screens/auth/application/authentication_bloc.dart';
+import 'package:now_apps/screens/home/application/home_bloc.dart';
 import 'package:now_apps/screens/home/presentation/home.dart';
 import 'package:otp_timer_button/otp_timer_button.dart';
 import 'package:pinput/pinput.dart';
@@ -101,6 +102,7 @@ class VerifyOTP extends StatelessWidget {
   GestureDetector verifyButton(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        context.read<HomeBloc>().add(const HomeEvent.getRetailers());
         context
             .read<AuthenticationBloc>()
             .add(const AuthenticationEvent.otpSendOrNot(otpSendOrNot: false));
