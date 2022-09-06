@@ -109,7 +109,7 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 context
                     .read<ProductBloc>()
-                    .add(const ProductEvent.getProduct(retailerId: '101'));
+                    .add(const ProductEvent.getProduct(retailerId: '102'));
                 Navigator.push(
                   context,
                   FadePageRoute(
@@ -137,7 +137,7 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   context
                       .read<ProductBloc>()
-                      .add(const ProductEvent.getProduct(retailerId: '101'));
+                      .add(const ProductEvent.getProduct(retailerId: '103'));
                   Navigator.push(
                     context,
                     FadePageRoute(
@@ -159,7 +159,7 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   context
                       .read<ProductBloc>()
-                      .add(const ProductEvent.getProduct(retailerId: '101'));
+                      .add(const ProductEvent.getProduct(retailerId: '104'));
                   Navigator.push(
                     context,
                     FadePageRoute(

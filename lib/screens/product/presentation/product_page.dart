@@ -56,7 +56,7 @@ class ProductPage extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Container(
-                            color: const Color(0xffD9D9D9),
+                            color: Colors.white,
                             child: Image.network(
                                 state.productDataModel![index].productImage!),
                           ),
