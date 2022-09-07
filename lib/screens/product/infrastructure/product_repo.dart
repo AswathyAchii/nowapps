@@ -30,6 +30,9 @@ class ProductRepo extends IProductRepo {
     required String cartID,
     required String quantity,
     required String orderId,
+    required String productName,
+    required String productPrice,
+    required String productImage,
   }) async {
     try {
       var map = <String, dynamic>{};
@@ -39,6 +42,9 @@ class ProductRepo extends IProductRepo {
       map['cartId'] = cartID;
       map['orderId'] = orderId;
       map['quantity'] = quantity;
+      map['productName'] = productName;
+      map['productPrice'] = productPrice;
+      map['productImage'] = productImage;
       final response = await http.post(Uri.parse(root), body: map);
       if (response.statusCode == 200 || response.statusCode == 201) {
         print(response.body);
@@ -132,8 +138,11 @@ class ProductRepo extends IProductRepo {
 
   //----------------- UPDATE PRODUCT IN CART ----------------------//
   @override
-  Future<Either<ProductFailures, String>> updateQuantityOfProductInCart(
-      {required int cartID, required int quantity}) async {
+  Future<Either<ProductFailures, String>> updateQuantityOfProductInCart({
+    required int cartID,
+    required int quantity,
+    required int productPrice,
+  }) async {
     try {
       var map = <String, dynamic>{};
       map['action'] = updateCARTQuantity;

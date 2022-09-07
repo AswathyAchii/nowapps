@@ -11,7 +11,6 @@ import 'package:now_apps/screens/home/presentation/home.dart';
 import 'package:now_apps/screens/product/application/product_bloc.dart';
 import 'package:now_apps/screens/product/presentation/cart_page.dart';
 import 'package:now_apps/screens/product/presentation/product_page.dart';
-import 'package:now_apps/screens/product/widget/checkout_dailog.dart';
 
 class MainProductPage extends StatelessWidget {
   const MainProductPage({

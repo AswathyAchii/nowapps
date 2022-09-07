@@ -34,7 +34,10 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
         retalierID: event.retailerId,
         orderId: '${state.orederId + 1}',
         cartID: '${state.cartId + 1}',
-        quantity: "${state.cartItemItemQuantity + 1}",
+        quantity: "1",
+        productName: event.productName,
+        productPrice: event.productPrice,
+        productImage: event.productImage,
       );
       emit(
         data.fold(
@@ -43,20 +46,24 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
                   cartFailureOrSuccessOption: some(Left(l)),
                 ), (r) {
           return state.copyWith(
-              isCartLoading: false,
-              apiResponse: r,
-              displayCartButton: true,
-              cartId: state.cartId + 1,
-              cartItemItemQuantity: state.cartItemItemQuantity + 1);
+            isCartLoading: false,
+            apiResponse: r,
+            displayCartButton: true,
+            cartId: state.cartId + 1,
+          );
         }),
       );
     });
-
+    // --------- get Product price---------//
+    on<_ProductPrice>((event, emit) async {
+      // emit(state.copyWith(productPrice: event.productPrice));
+    });
     // --------- Increment cart Item quantity 1---------//
     on<_IncrementCartItemQuantity>((event, emit) async {
       final data = await iHomeRepo.updateQuantityOfProductInCart(
         cartID: event.cartId,
         quantity: event.quantity,
+        productPrice: event.productPrice,
       );
       emit(
         data.fold(
@@ -65,19 +72,20 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
                   cartFailureOrSuccessOption: some(Left(l)),
                 ), (r) {
           return state.copyWith(
-              isCartLoading: false,
-              apiResponse: r,
-              cartItemItemQuantity: state.cartItemItemQuantity + 1);
+            isCartLoading: false,
+            apiResponse: r,
+          );
         }),
       );
     });
 
     // --------- Decrement cart Item quantity 1---------//
     on<_DecrementCartItemQuantity>((event, emit) async {
-      if (state.cartItemItemQuantity > 1) {
+      if (event.quantity >= 1) {
         final data = await iHomeRepo.updateQuantityOfProductInCart(
           cartID: event.cartId,
           quantity: event.quantity,
+          productPrice: event.productPrice,
         );
         emit(
           data.fold(
@@ -86,9 +94,9 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
                     cartFailureOrSuccessOption: some(Left(l)),
                   ), (r) {
             return state.copyWith(
-                isCartLoading: false,
-                apiResponse: r,
-                cartItemItemQuantity: state.cartItemItemQuantity - 1);
+              isCartLoading: false,
+              apiResponse: r,
+            );
           }),
         );
       } else {
@@ -120,9 +128,14 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
                   productFailureOrSuccessOption: none(),
                   cartFailureOrSuccessOption: some(Left(l)),
                 ), (r) {
+          int sum = 0;
+          for (int i = 0; i < r.length; i++) {
+            sum = sum + int.parse(r[1].productPrice);
+          }
           return state.copyWith(
             isCartLoading: false,
             cartDataModel: r,
+            totalProductPrice: sum,
           );
         }),
       );

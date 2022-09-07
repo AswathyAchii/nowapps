@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 /*
 Date: 06/09/2022
 Path: lib\screens\product\widget\product_descr\product_description.dart
@@ -8,7 +10,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:now_apps/core/constants.dart';
+import 'package:now_apps/router/router.dart';
 import 'package:now_apps/screens/product/application/product_bloc.dart';
+import 'package:now_apps/screens/product/presentation/cart_page.dart';
+import 'package:now_apps/screens/product/presentation/main_product_page.dart';
 
 class ProductDescription extends StatelessWidget {
   const ProductDescription({
@@ -20,7 +25,9 @@ class ProductDescription extends StatelessWidget {
     required this.mrp,
     required this.productId,
     required this.retailerId,
+    // required this.cartId,
   }) : super(key: key);
+  // final String? cartId;
   final String? title;
   final String? image;
   final String? productCode;
@@ -36,10 +43,6 @@ class ProductDescription extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: backButton(context), //back button
-        actions: [
-          cartButton(context),
-          kWidth10
-        ], // will navigate to cart screen
       ),
       body: Center(
         child: Container(
@@ -73,9 +76,7 @@ class ProductDescription extends StatelessWidget {
                     deivider(),
                     productPrice(), // product mrp and sell price
                     kHeight10,
-                    state.displayCartButton
-                        ? addToCartButton(state, context)
-                        : addToCartButton1(context) // add product to cart
+                    addToCartButton1(context, state) // add product to cart
                   ],
                 );
               },
@@ -86,77 +87,27 @@ class ProductDescription extends StatelessWidget {
     );
   }
 
-  Row addToCartButton(ProductState state, BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        Container(
-          height: 32,
-          width: 130,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            border: Border.all(
-              color: const Color.fromRGBO(0, 0, 0, 1),
-              width: 0.5,
-            ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.only(top: 2.0, bottom: 2.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    context.read<ProductBloc>().add(
-                        ProductEvent.incrementCartItemQuantity(
-                            cartId: state.cartId,
-                            quantity: state.cartItemItemQuantity + 1));
-                  },
-                  child: const Padding(
-                    padding: EdgeInsets.only(left: 10.0),
-                    child: Icon(
-                      Icons.add,
-                      color: Colors.black54,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 2.0, right: 2.0),
-                  child: Text(state.cartItemItemQuantity.toString()),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    context.read<ProductBloc>().add(
-                        ProductEvent.decrementCartItemQuantity(
-                            cartId: state.cartId,
-                            quantity: state.cartItemItemQuantity - 1));
-                  },
-                  child: const Padding(
-                    padding: EdgeInsets.only(right: 10.0),
-                    child: Icon(
-                      Icons.remove,
-                      color: Colors.black54,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
 //--------Add product to cart----------//
-  Row addToCartButton1(BuildContext context) {
+  Row addToCartButton1(BuildContext context, ProductState state) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         OutlinedButton(
           onPressed: () {
+            context.read<ProductBloc>().add(
+                  const ProductEvent.productPageOrNot(
+                    productOrNot: false,
+                  ),
+                );
             context.read<ProductBloc>().add(ProductEvent.addProductToCart(
-                productId: productId!, retailerId: retailerId!));
+                  productId: productId!,
+                  retailerId: retailerId!,
+                  productImage: image!,
+                  productName: title!,
+                  productPrice: sellPrice!,
+                ));
+
+            Navigator.pop(context);
           },
           child: Text(
             "Add",

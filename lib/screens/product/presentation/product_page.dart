@@ -42,21 +42,22 @@ class ProductPage extends StatelessWidget {
               return GestureDetector(
                 onTap: () {
                   Navigator.push(
-                      context,
-                      FadePageRoute(
-                        widget: ProductDescription(
-                          title: state.productDataModel![index].productName!,
-                          image: state.productDataModel![index].productImage!,
-                          productCode:
-                              state.productDataModel![index].productCode!,
-                          mrp: state.productDataModel![index].prodMrp,
-                          sellPrice: state.productDataModel![index].prodSell!,
-                          productId: state.productDataModel![index].productid,
-                          retailerId: state.retailerID,
-                        ),
-                        alignment: Alignment.bottomRight,
-                        curve: Curves.ease,
-                      ));
+                    context,
+                    FadePageRoute(
+                      widget: ProductDescription(
+                        title: state.productDataModel![index].productName!,
+                        image: state.productDataModel![index].productImage!,
+                        productCode:
+                            state.productDataModel![index].productCode!,
+                        mrp: state.productDataModel![index].prodMrp,
+                        sellPrice: state.productDataModel![index].prodSell!,
+                        productId: state.productDataModel![index].productid,
+                        retailerId: state.retailerID,
+                      ),
+                      alignment: Alignment.bottomRight,
+                      curve: Curves.ease,
+                    ),
+                  );
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(

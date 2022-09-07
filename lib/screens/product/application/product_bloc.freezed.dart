@@ -21,15 +21,17 @@ mixin _$ProductEvent {
     required TResult Function() started,
     required TResult Function(bool productOrNot) productPageOrNot,
     required TResult Function(String retailerId) getProduct,
-    required TResult Function(String productId, String retailerId)
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
         addProductToCart,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         incrementCartItemQuantity,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         decrementCartItemQuantity,
     required TResult Function(String retailerId) getCartProducts,
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,11 +39,16 @@ mixin _$ProductEvent {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -49,11 +56,16 @@ mixin _$ProductEvent {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -70,6 +82,7 @@ mixin _$ProductEvent {
     required TResult Function(_GetCartProducts value) getCartProducts,
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +98,7 @@ mixin _$ProductEvent {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -100,6 +114,7 @@ mixin _$ProductEvent {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -163,15 +178,17 @@ class _$_Started implements _Started {
     required TResult Function() started,
     required TResult Function(bool productOrNot) productPageOrNot,
     required TResult Function(String retailerId) getProduct,
-    required TResult Function(String productId, String retailerId)
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
         addProductToCart,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         incrementCartItemQuantity,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         decrementCartItemQuantity,
     required TResult Function(String retailerId) getCartProducts,
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
   }) {
     return started();
   }
@@ -182,11 +199,16 @@ class _$_Started implements _Started {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
   }) {
     return started?.call();
   }
@@ -197,11 +219,16 @@ class _$_Started implements _Started {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -224,6 +251,7 @@ class _$_Started implements _Started {
     required TResult Function(_GetCartProducts value) getCartProducts,
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
   }) {
     return started(this);
   }
@@ -242,6 +270,7 @@ class _$_Started implements _Started {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
   }) {
     return started?.call(this);
   }
@@ -260,6 +289,7 @@ class _$_Started implements _Started {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -342,15 +372,17 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     required TResult Function() started,
     required TResult Function(bool productOrNot) productPageOrNot,
     required TResult Function(String retailerId) getProduct,
-    required TResult Function(String productId, String retailerId)
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
         addProductToCart,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         incrementCartItemQuantity,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         decrementCartItemQuantity,
     required TResult Function(String retailerId) getCartProducts,
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
   }) {
     return productPageOrNot(productOrNot);
   }
@@ -361,11 +393,16 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
   }) {
     return productPageOrNot?.call(productOrNot);
   }
@@ -376,11 +413,16 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
     required TResult orElse(),
   }) {
     if (productPageOrNot != null) {
@@ -403,6 +445,7 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     required TResult Function(_GetCartProducts value) getCartProducts,
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
   }) {
     return productPageOrNot(this);
   }
@@ -421,6 +464,7 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
   }) {
     return productPageOrNot?.call(this);
   }
@@ -439,6 +483,7 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
     required TResult orElse(),
   }) {
     if (productPageOrNot != null) {
@@ -526,15 +571,17 @@ class _$_GetProduct implements _GetProduct {
     required TResult Function() started,
     required TResult Function(bool productOrNot) productPageOrNot,
     required TResult Function(String retailerId) getProduct,
-    required TResult Function(String productId, String retailerId)
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
         addProductToCart,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         incrementCartItemQuantity,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         decrementCartItemQuantity,
     required TResult Function(String retailerId) getCartProducts,
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
   }) {
     return getProduct(retailerId);
   }
@@ -545,11 +592,16 @@ class _$_GetProduct implements _GetProduct {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
   }) {
     return getProduct?.call(retailerId);
   }
@@ -560,11 +612,16 @@ class _$_GetProduct implements _GetProduct {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
     required TResult orElse(),
   }) {
     if (getProduct != null) {
@@ -587,6 +644,7 @@ class _$_GetProduct implements _GetProduct {
     required TResult Function(_GetCartProducts value) getCartProducts,
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
   }) {
     return getProduct(this);
   }
@@ -605,6 +663,7 @@ class _$_GetProduct implements _GetProduct {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
   }) {
     return getProduct?.call(this);
   }
@@ -623,6 +682,7 @@ class _$_GetProduct implements _GetProduct {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
     required TResult orElse(),
   }) {
     if (getProduct != null) {
@@ -646,7 +706,12 @@ abstract class _$$_AddProductToCartCopyWith<$Res> {
   factory _$$_AddProductToCartCopyWith(
           _$_AddProductToCart value, $Res Function(_$_AddProductToCart) then) =
       __$$_AddProductToCartCopyWithImpl<$Res>;
-  $Res call({String productId, String retailerId});
+  $Res call(
+      {String productId,
+      String retailerId,
+      String productName,
+      String productPrice,
+      String productImage});
 }
 
 /// @nodoc
@@ -664,6 +729,9 @@ class __$$_AddProductToCartCopyWithImpl<$Res>
   $Res call({
     Object? productId = freezed,
     Object? retailerId = freezed,
+    Object? productName = freezed,
+    Object? productPrice = freezed,
+    Object? productImage = freezed,
   }) {
     return _then(_$_AddProductToCart(
       productId: productId == freezed
@@ -674,6 +742,18 @@ class __$$_AddProductToCartCopyWithImpl<$Res>
           ? _value.retailerId
           : retailerId // ignore: cast_nullable_to_non_nullable
               as String,
+      productName: productName == freezed
+          ? _value.productName
+          : productName // ignore: cast_nullable_to_non_nullable
+              as String,
+      productPrice: productPrice == freezed
+          ? _value.productPrice
+          : productPrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      productImage: productImage == freezed
+          ? _value.productImage
+          : productImage // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -682,16 +762,26 @@ class __$$_AddProductToCartCopyWithImpl<$Res>
 
 class _$_AddProductToCart implements _AddProductToCart {
   const _$_AddProductToCart(
-      {required this.productId, required this.retailerId});
+      {required this.productId,
+      required this.retailerId,
+      required this.productName,
+      required this.productPrice,
+      required this.productImage});
 
   @override
   final String productId;
   @override
   final String retailerId;
+  @override
+  final String productName;
+  @override
+  final String productPrice;
+  @override
+  final String productImage;
 
   @override
   String toString() {
-    return 'ProductEvent.addProductToCart(productId: $productId, retailerId: $retailerId)';
+    return 'ProductEvent.addProductToCart(productId: $productId, retailerId: $retailerId, productName: $productName, productPrice: $productPrice, productImage: $productImage)';
   }
 
   @override
@@ -701,14 +791,23 @@ class _$_AddProductToCart implements _AddProductToCart {
             other is _$_AddProductToCart &&
             const DeepCollectionEquality().equals(other.productId, productId) &&
             const DeepCollectionEquality()
-                .equals(other.retailerId, retailerId));
+                .equals(other.retailerId, retailerId) &&
+            const DeepCollectionEquality()
+                .equals(other.productName, productName) &&
+            const DeepCollectionEquality()
+                .equals(other.productPrice, productPrice) &&
+            const DeepCollectionEquality()
+                .equals(other.productImage, productImage));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(productId),
-      const DeepCollectionEquality().hash(retailerId));
+      const DeepCollectionEquality().hash(retailerId),
+      const DeepCollectionEquality().hash(productName),
+      const DeepCollectionEquality().hash(productPrice),
+      const DeepCollectionEquality().hash(productImage));
 
   @JsonKey(ignore: true)
   @override
@@ -721,17 +820,20 @@ class _$_AddProductToCart implements _AddProductToCart {
     required TResult Function() started,
     required TResult Function(bool productOrNot) productPageOrNot,
     required TResult Function(String retailerId) getProduct,
-    required TResult Function(String productId, String retailerId)
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
         addProductToCart,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         incrementCartItemQuantity,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         decrementCartItemQuantity,
     required TResult Function(String retailerId) getCartProducts,
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
   }) {
-    return addProductToCart(productId, retailerId);
+    return addProductToCart(
+        productId, retailerId, productName, this.productPrice, productImage);
   }
 
   @override
@@ -740,13 +842,19 @@ class _$_AddProductToCart implements _AddProductToCart {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
   }) {
-    return addProductToCart?.call(productId, retailerId);
+    return addProductToCart?.call(
+        productId, retailerId, productName, this.productPrice, productImage);
   }
 
   @override
@@ -755,15 +863,21 @@ class _$_AddProductToCart implements _AddProductToCart {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
     required TResult orElse(),
   }) {
     if (addProductToCart != null) {
-      return addProductToCart(productId, retailerId);
+      return addProductToCart(
+          productId, retailerId, productName, this.productPrice, productImage);
     }
     return orElse();
   }
@@ -782,6 +896,7 @@ class _$_AddProductToCart implements _AddProductToCart {
     required TResult Function(_GetCartProducts value) getCartProducts,
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
   }) {
     return addProductToCart(this);
   }
@@ -800,6 +915,7 @@ class _$_AddProductToCart implements _AddProductToCart {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
   }) {
     return addProductToCart?.call(this);
   }
@@ -818,6 +934,7 @@ class _$_AddProductToCart implements _AddProductToCart {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
     required TResult orElse(),
   }) {
     if (addProductToCart != null) {
@@ -830,10 +947,16 @@ class _$_AddProductToCart implements _AddProductToCart {
 abstract class _AddProductToCart implements ProductEvent {
   const factory _AddProductToCart(
       {required final String productId,
-      required final String retailerId}) = _$_AddProductToCart;
+      required final String retailerId,
+      required final String productName,
+      required final String productPrice,
+      required final String productImage}) = _$_AddProductToCart;
 
   String get productId;
   String get retailerId;
+  String get productName;
+  String get productPrice;
+  String get productImage;
   @JsonKey(ignore: true)
   _$$_AddProductToCartCopyWith<_$_AddProductToCart> get copyWith =>
       throw _privateConstructorUsedError;
@@ -845,7 +968,7 @@ abstract class _$$_IncrementCartItemQuantityCopyWith<$Res> {
           _$_IncrementCartItemQuantity value,
           $Res Function(_$_IncrementCartItemQuantity) then) =
       __$$_IncrementCartItemQuantityCopyWithImpl<$Res>;
-  $Res call({int cartId, int quantity});
+  $Res call({int cartId, int quantity, int productPrice});
 }
 
 /// @nodoc
@@ -865,6 +988,7 @@ class __$$_IncrementCartItemQuantityCopyWithImpl<$Res>
   $Res call({
     Object? cartId = freezed,
     Object? quantity = freezed,
+    Object? productPrice = freezed,
   }) {
     return _then(_$_IncrementCartItemQuantity(
       cartId: cartId == freezed
@@ -875,6 +999,10 @@ class __$$_IncrementCartItemQuantityCopyWithImpl<$Res>
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
               as int,
+      productPrice: productPrice == freezed
+          ? _value.productPrice
+          : productPrice // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -883,16 +1011,20 @@ class __$$_IncrementCartItemQuantityCopyWithImpl<$Res>
 
 class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
   const _$_IncrementCartItemQuantity(
-      {required this.cartId, required this.quantity});
+      {required this.cartId,
+      required this.quantity,
+      required this.productPrice});
 
   @override
   final int cartId;
   @override
   final int quantity;
+  @override
+  final int productPrice;
 
   @override
   String toString() {
-    return 'ProductEvent.incrementCartItemQuantity(cartId: $cartId, quantity: $quantity)';
+    return 'ProductEvent.incrementCartItemQuantity(cartId: $cartId, quantity: $quantity, productPrice: $productPrice)';
   }
 
   @override
@@ -901,14 +1033,17 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
         (other.runtimeType == runtimeType &&
             other is _$_IncrementCartItemQuantity &&
             const DeepCollectionEquality().equals(other.cartId, cartId) &&
-            const DeepCollectionEquality().equals(other.quantity, quantity));
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
+            const DeepCollectionEquality()
+                .equals(other.productPrice, productPrice));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(cartId),
-      const DeepCollectionEquality().hash(quantity));
+      const DeepCollectionEquality().hash(quantity),
+      const DeepCollectionEquality().hash(productPrice));
 
   @JsonKey(ignore: true)
   @override
@@ -922,17 +1057,19 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     required TResult Function() started,
     required TResult Function(bool productOrNot) productPageOrNot,
     required TResult Function(String retailerId) getProduct,
-    required TResult Function(String productId, String retailerId)
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
         addProductToCart,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         incrementCartItemQuantity,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         decrementCartItemQuantity,
     required TResult Function(String retailerId) getCartProducts,
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
   }) {
-    return incrementCartItemQuantity(cartId, quantity);
+    return incrementCartItemQuantity(cartId, quantity, this.productPrice);
   }
 
   @override
@@ -941,13 +1078,18 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
   }) {
-    return incrementCartItemQuantity?.call(cartId, quantity);
+    return incrementCartItemQuantity?.call(cartId, quantity, this.productPrice);
   }
 
   @override
@@ -956,15 +1098,20 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
     required TResult orElse(),
   }) {
     if (incrementCartItemQuantity != null) {
-      return incrementCartItemQuantity(cartId, quantity);
+      return incrementCartItemQuantity(cartId, quantity, this.productPrice);
     }
     return orElse();
   }
@@ -983,6 +1130,7 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     required TResult Function(_GetCartProducts value) getCartProducts,
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
   }) {
     return incrementCartItemQuantity(this);
   }
@@ -1001,6 +1149,7 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
   }) {
     return incrementCartItemQuantity?.call(this);
   }
@@ -1019,6 +1168,7 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
     required TResult orElse(),
   }) {
     if (incrementCartItemQuantity != null) {
@@ -1031,10 +1181,12 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
 abstract class _IncrementCartItemQuantity implements ProductEvent {
   const factory _IncrementCartItemQuantity(
       {required final int cartId,
-      required final int quantity}) = _$_IncrementCartItemQuantity;
+      required final int quantity,
+      required final int productPrice}) = _$_IncrementCartItemQuantity;
 
   int get cartId;
   int get quantity;
+  int get productPrice;
   @JsonKey(ignore: true)
   _$$_IncrementCartItemQuantityCopyWith<_$_IncrementCartItemQuantity>
       get copyWith => throw _privateConstructorUsedError;
@@ -1046,7 +1198,7 @@ abstract class _$$_DecrementCartItemQuantityCopyWith<$Res> {
           _$_DecrementCartItemQuantity value,
           $Res Function(_$_DecrementCartItemQuantity) then) =
       __$$_DecrementCartItemQuantityCopyWithImpl<$Res>;
-  $Res call({int cartId, int quantity});
+  $Res call({int cartId, int quantity, int productPrice});
 }
 
 /// @nodoc
@@ -1066,6 +1218,7 @@ class __$$_DecrementCartItemQuantityCopyWithImpl<$Res>
   $Res call({
     Object? cartId = freezed,
     Object? quantity = freezed,
+    Object? productPrice = freezed,
   }) {
     return _then(_$_DecrementCartItemQuantity(
       cartId: cartId == freezed
@@ -1076,6 +1229,10 @@ class __$$_DecrementCartItemQuantityCopyWithImpl<$Res>
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
               as int,
+      productPrice: productPrice == freezed
+          ? _value.productPrice
+          : productPrice // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1084,16 +1241,20 @@ class __$$_DecrementCartItemQuantityCopyWithImpl<$Res>
 
 class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
   const _$_DecrementCartItemQuantity(
-      {required this.cartId, required this.quantity});
+      {required this.cartId,
+      required this.quantity,
+      required this.productPrice});
 
   @override
   final int cartId;
   @override
   final int quantity;
+  @override
+  final int productPrice;
 
   @override
   String toString() {
-    return 'ProductEvent.decrementCartItemQuantity(cartId: $cartId, quantity: $quantity)';
+    return 'ProductEvent.decrementCartItemQuantity(cartId: $cartId, quantity: $quantity, productPrice: $productPrice)';
   }
 
   @override
@@ -1102,14 +1263,17 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
         (other.runtimeType == runtimeType &&
             other is _$_DecrementCartItemQuantity &&
             const DeepCollectionEquality().equals(other.cartId, cartId) &&
-            const DeepCollectionEquality().equals(other.quantity, quantity));
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
+            const DeepCollectionEquality()
+                .equals(other.productPrice, productPrice));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(cartId),
-      const DeepCollectionEquality().hash(quantity));
+      const DeepCollectionEquality().hash(quantity),
+      const DeepCollectionEquality().hash(productPrice));
 
   @JsonKey(ignore: true)
   @override
@@ -1123,17 +1287,19 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     required TResult Function() started,
     required TResult Function(bool productOrNot) productPageOrNot,
     required TResult Function(String retailerId) getProduct,
-    required TResult Function(String productId, String retailerId)
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
         addProductToCart,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         incrementCartItemQuantity,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         decrementCartItemQuantity,
     required TResult Function(String retailerId) getCartProducts,
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
   }) {
-    return decrementCartItemQuantity(cartId, quantity);
+    return decrementCartItemQuantity(cartId, quantity, this.productPrice);
   }
 
   @override
@@ -1142,13 +1308,18 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
   }) {
-    return decrementCartItemQuantity?.call(cartId, quantity);
+    return decrementCartItemQuantity?.call(cartId, quantity, this.productPrice);
   }
 
   @override
@@ -1157,15 +1328,20 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
     required TResult orElse(),
   }) {
     if (decrementCartItemQuantity != null) {
-      return decrementCartItemQuantity(cartId, quantity);
+      return decrementCartItemQuantity(cartId, quantity, this.productPrice);
     }
     return orElse();
   }
@@ -1184,6 +1360,7 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     required TResult Function(_GetCartProducts value) getCartProducts,
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
   }) {
     return decrementCartItemQuantity(this);
   }
@@ -1202,6 +1379,7 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
   }) {
     return decrementCartItemQuantity?.call(this);
   }
@@ -1220,6 +1398,7 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
     required TResult orElse(),
   }) {
     if (decrementCartItemQuantity != null) {
@@ -1232,10 +1411,12 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
 abstract class _DecrementCartItemQuantity implements ProductEvent {
   const factory _DecrementCartItemQuantity(
       {required final int cartId,
-      required final int quantity}) = _$_DecrementCartItemQuantity;
+      required final int quantity,
+      required final int productPrice}) = _$_DecrementCartItemQuantity;
 
   int get cartId;
   int get quantity;
+  int get productPrice;
   @JsonKey(ignore: true)
   _$$_DecrementCartItemQuantityCopyWith<_$_DecrementCartItemQuantity>
       get copyWith => throw _privateConstructorUsedError;
@@ -1310,15 +1491,17 @@ class _$_GetCartProducts implements _GetCartProducts {
     required TResult Function() started,
     required TResult Function(bool productOrNot) productPageOrNot,
     required TResult Function(String retailerId) getProduct,
-    required TResult Function(String productId, String retailerId)
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
         addProductToCart,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         incrementCartItemQuantity,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         decrementCartItemQuantity,
     required TResult Function(String retailerId) getCartProducts,
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
   }) {
     return getCartProducts(retailerId);
   }
@@ -1329,11 +1512,16 @@ class _$_GetCartProducts implements _GetCartProducts {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
   }) {
     return getCartProducts?.call(retailerId);
   }
@@ -1344,11 +1532,16 @@ class _$_GetCartProducts implements _GetCartProducts {
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
     required TResult orElse(),
   }) {
     if (getCartProducts != null) {
@@ -1371,6 +1564,7 @@ class _$_GetCartProducts implements _GetCartProducts {
     required TResult Function(_GetCartProducts value) getCartProducts,
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
   }) {
     return getCartProducts(this);
   }
@@ -1389,6 +1583,7 @@ class _$_GetCartProducts implements _GetCartProducts {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
   }) {
     return getCartProducts?.call(this);
   }
@@ -1407,6 +1602,7 @@ class _$_GetCartProducts implements _GetCartProducts {
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
     required TResult orElse(),
   }) {
     if (getCartProducts != null) {
@@ -1502,15 +1698,17 @@ class _$_ClearCartQuantityandDisplayAddButton
     required TResult Function() started,
     required TResult Function(bool productOrNot) productPageOrNot,
     required TResult Function(String retailerId) getProduct,
-    required TResult Function(String productId, String retailerId)
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
         addProductToCart,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         incrementCartItemQuantity,
-    required TResult Function(int cartId, int quantity)
+    required TResult Function(int cartId, int quantity, int productPrice)
         decrementCartItemQuantity,
     required TResult Function(String retailerId) getCartProducts,
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
   }) {
     return clearCartQuantityandDisplayAddButton(cartQunatity);
   }
@@ -1521,11 +1719,16 @@ class _$_ClearCartQuantityandDisplayAddButton
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
   }) {
     return clearCartQuantityandDisplayAddButton?.call(cartQunatity);
   }
@@ -1536,11 +1739,16 @@ class _$_ClearCartQuantityandDisplayAddButton
     TResult Function()? started,
     TResult Function(bool productOrNot)? productPageOrNot,
     TResult Function(String retailerId)? getProduct,
-    TResult Function(String productId, String retailerId)? addProductToCart,
-    TResult Function(int cartId, int quantity)? incrementCartItemQuantity,
-    TResult Function(int cartId, int quantity)? decrementCartItemQuantity,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
     required TResult orElse(),
   }) {
     if (clearCartQuantityandDisplayAddButton != null) {
@@ -1563,6 +1771,7 @@ class _$_ClearCartQuantityandDisplayAddButton
     required TResult Function(_GetCartProducts value) getCartProducts,
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
   }) {
     return clearCartQuantityandDisplayAddButton(this);
   }
@@ -1581,6 +1790,7 @@ class _$_ClearCartQuantityandDisplayAddButton
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
   }) {
     return clearCartQuantityandDisplayAddButton?.call(this);
   }
@@ -1599,6 +1809,7 @@ class _$_ClearCartQuantityandDisplayAddButton
     TResult Function(_GetCartProducts value)? getCartProducts,
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
     required TResult orElse(),
   }) {
     if (clearCartQuantityandDisplayAddButton != null) {
@@ -1621,6 +1832,206 @@ abstract class _ClearCartQuantityandDisplayAddButton implements ProductEvent {
 }
 
 /// @nodoc
+abstract class _$$_ProductPriceCopyWith<$Res> {
+  factory _$$_ProductPriceCopyWith(
+          _$_ProductPrice value, $Res Function(_$_ProductPrice) then) =
+      __$$_ProductPriceCopyWithImpl<$Res>;
+  $Res call({int productPrice});
+}
+
+/// @nodoc
+class __$$_ProductPriceCopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res>
+    implements _$$_ProductPriceCopyWith<$Res> {
+  __$$_ProductPriceCopyWithImpl(
+      _$_ProductPrice _value, $Res Function(_$_ProductPrice) _then)
+      : super(_value, (v) => _then(v as _$_ProductPrice));
+
+  @override
+  _$_ProductPrice get _value => super._value as _$_ProductPrice;
+
+  @override
+  $Res call({
+    Object? productPrice = freezed,
+  }) {
+    return _then(_$_ProductPrice(
+      productPrice: productPrice == freezed
+          ? _value.productPrice
+          : productPrice // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ProductPrice implements _ProductPrice {
+  const _$_ProductPrice({required this.productPrice});
+
+  @override
+  final int productPrice;
+
+  @override
+  String toString() {
+    return 'ProductEvent.productPrice(productPrice: $productPrice)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ProductPrice &&
+            const DeepCollectionEquality()
+                .equals(other.productPrice, productPrice));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(productPrice));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ProductPriceCopyWith<_$_ProductPrice> get copyWith =>
+      __$$_ProductPriceCopyWithImpl<_$_ProductPrice>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool productOrNot) productPageOrNot,
+    required TResult Function(String retailerId) getProduct,
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
+        addProductToCart,
+    required TResult Function(int cartId, int quantity, int productPrice)
+        incrementCartItemQuantity,
+    required TResult Function(int cartId, int quantity, int productPrice)
+        decrementCartItemQuantity,
+    required TResult Function(String retailerId) getCartProducts,
+    required TResult Function(int cartQunatity)
+        clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
+  }) {
+    return productPrice(this.productPrice);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool productOrNot)? productPageOrNot,
+    TResult Function(String retailerId)? getProduct,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
+    TResult Function(String retailerId)? getCartProducts,
+    TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
+  }) {
+    return productPrice?.call(this.productPrice);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool productOrNot)? productPageOrNot,
+    TResult Function(String retailerId)? getProduct,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
+    TResult Function(String retailerId)? getCartProducts,
+    TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
+    required TResult orElse(),
+  }) {
+    if (productPrice != null) {
+      return productPrice(this.productPrice);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_ProductPageOrNot value) productPageOrNot,
+    required TResult Function(_GetProduct value) getProduct,
+    required TResult Function(_AddProductToCart value) addProductToCart,
+    required TResult Function(_IncrementCartItemQuantity value)
+        incrementCartItemQuantity,
+    required TResult Function(_DecrementCartItemQuantity value)
+        decrementCartItemQuantity,
+    required TResult Function(_GetCartProducts value) getCartProducts,
+    required TResult Function(_ClearCartQuantityandDisplayAddButton value)
+        clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
+  }) {
+    return productPrice(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ProductPageOrNot value)? productPageOrNot,
+    TResult Function(_GetProduct value)? getProduct,
+    TResult Function(_AddProductToCart value)? addProductToCart,
+    TResult Function(_IncrementCartItemQuantity value)?
+        incrementCartItemQuantity,
+    TResult Function(_DecrementCartItemQuantity value)?
+        decrementCartItemQuantity,
+    TResult Function(_GetCartProducts value)? getCartProducts,
+    TResult Function(_ClearCartQuantityandDisplayAddButton value)?
+        clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
+  }) {
+    return productPrice?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ProductPageOrNot value)? productPageOrNot,
+    TResult Function(_GetProduct value)? getProduct,
+    TResult Function(_AddProductToCart value)? addProductToCart,
+    TResult Function(_IncrementCartItemQuantity value)?
+        incrementCartItemQuantity,
+    TResult Function(_DecrementCartItemQuantity value)?
+        decrementCartItemQuantity,
+    TResult Function(_GetCartProducts value)? getCartProducts,
+    TResult Function(_ClearCartQuantityandDisplayAddButton value)?
+        clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
+    required TResult orElse(),
+  }) {
+    if (productPrice != null) {
+      return productPrice(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ProductPrice implements ProductEvent {
+  const factory _ProductPrice({required final int productPrice}) =
+      _$_ProductPrice;
+
+  int get productPrice;
+  @JsonKey(ignore: true)
+  _$$_ProductPriceCopyWith<_$_ProductPrice> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$ProductState {
   bool get productsOrNot => throw _privateConstructorUsedError;
   bool get isCartLoading => throw _privateConstructorUsedError;
@@ -1638,6 +2049,7 @@ mixin _$ProductState {
   String get apiResponse => throw _privateConstructorUsedError;
   bool get displayCartButton => throw _privateConstructorUsedError;
   int get cartItemItemQuantity => throw _privateConstructorUsedError;
+  int get totalProductPrice => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ProductStateCopyWith<ProductState> get copyWith =>
@@ -1664,7 +2076,8 @@ abstract class $ProductStateCopyWith<$Res> {
       int orederId,
       String apiResponse,
       bool displayCartButton,
-      int cartItemItemQuantity});
+      int cartItemItemQuantity,
+      int totalProductPrice});
 }
 
 /// @nodoc
@@ -1690,6 +2103,7 @@ class _$ProductStateCopyWithImpl<$Res> implements $ProductStateCopyWith<$Res> {
     Object? apiResponse = freezed,
     Object? displayCartButton = freezed,
     Object? cartItemItemQuantity = freezed,
+    Object? totalProductPrice = freezed,
   }) {
     return _then(_value.copyWith(
       productsOrNot: productsOrNot == freezed
@@ -1744,6 +2158,10 @@ class _$ProductStateCopyWithImpl<$Res> implements $ProductStateCopyWith<$Res> {
           ? _value.cartItemItemQuantity
           : cartItemItemQuantity // ignore: cast_nullable_to_non_nullable
               as int,
+      totalProductPrice: totalProductPrice == freezed
+          ? _value.totalProductPrice
+          : totalProductPrice // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1770,7 +2188,8 @@ abstract class _$$_ProductStateCopyWith<$Res>
       int orederId,
       String apiResponse,
       bool displayCartButton,
-      int cartItemItemQuantity});
+      int cartItemItemQuantity,
+      int totalProductPrice});
 }
 
 /// @nodoc
@@ -1799,6 +2218,7 @@ class __$$_ProductStateCopyWithImpl<$Res>
     Object? apiResponse = freezed,
     Object? displayCartButton = freezed,
     Object? cartItemItemQuantity = freezed,
+    Object? totalProductPrice = freezed,
   }) {
     return _then(_$_ProductState(
       productsOrNot: productsOrNot == freezed
@@ -1853,6 +2273,10 @@ class __$$_ProductStateCopyWithImpl<$Res>
           ? _value.cartItemItemQuantity
           : cartItemItemQuantity // ignore: cast_nullable_to_non_nullable
               as int,
+      totalProductPrice: totalProductPrice == freezed
+          ? _value.totalProductPrice
+          : totalProductPrice // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1873,7 +2297,8 @@ class _$_ProductState implements _ProductState {
       required this.orederId,
       required this.apiResponse,
       required this.displayCartButton,
-      required this.cartItemItemQuantity})
+      required this.cartItemItemQuantity,
+      required this.totalProductPrice})
       : _productDataModel = productDataModel,
         _cartDataModel = cartDataModel;
 
@@ -1919,10 +2344,12 @@ class _$_ProductState implements _ProductState {
   final bool displayCartButton;
   @override
   final int cartItemItemQuantity;
+  @override
+  final int totalProductPrice;
 
   @override
   String toString() {
-    return 'ProductState(productsOrNot: $productsOrNot, isCartLoading: $isCartLoading, isProductLoading: $isProductLoading, productFailureOrSuccessOption: $productFailureOrSuccessOption, cartFailureOrSuccessOption: $cartFailureOrSuccessOption, productDataModel: $productDataModel, cartDataModel: $cartDataModel, retailerID: $retailerID, cartId: $cartId, orederId: $orederId, apiResponse: $apiResponse, displayCartButton: $displayCartButton, cartItemItemQuantity: $cartItemItemQuantity)';
+    return 'ProductState(productsOrNot: $productsOrNot, isCartLoading: $isCartLoading, isProductLoading: $isProductLoading, productFailureOrSuccessOption: $productFailureOrSuccessOption, cartFailureOrSuccessOption: $cartFailureOrSuccessOption, productDataModel: $productDataModel, cartDataModel: $cartDataModel, retailerID: $retailerID, cartId: $cartId, orederId: $orederId, apiResponse: $apiResponse, displayCartButton: $displayCartButton, cartItemItemQuantity: $cartItemItemQuantity, totalProductPrice: $totalProductPrice)';
   }
 
   @override
@@ -1954,7 +2381,9 @@ class _$_ProductState implements _ProductState {
             const DeepCollectionEquality()
                 .equals(other.displayCartButton, displayCartButton) &&
             const DeepCollectionEquality()
-                .equals(other.cartItemItemQuantity, cartItemItemQuantity));
+                .equals(other.cartItemItemQuantity, cartItemItemQuantity) &&
+            const DeepCollectionEquality()
+                .equals(other.totalProductPrice, totalProductPrice));
   }
 
   @override
@@ -1972,7 +2401,8 @@ class _$_ProductState implements _ProductState {
       const DeepCollectionEquality().hash(orederId),
       const DeepCollectionEquality().hash(apiResponse),
       const DeepCollectionEquality().hash(displayCartButton),
-      const DeepCollectionEquality().hash(cartItemItemQuantity));
+      const DeepCollectionEquality().hash(cartItemItemQuantity),
+      const DeepCollectionEquality().hash(totalProductPrice));
 
   @JsonKey(ignore: true)
   @override
@@ -1996,7 +2426,8 @@ abstract class _ProductState implements ProductState {
       required final int orederId,
       required final String apiResponse,
       required final bool displayCartButton,
-      required final int cartItemItemQuantity}) = _$_ProductState;
+      required final int cartItemItemQuantity,
+      required final int totalProductPrice}) = _$_ProductState;
 
   @override
   bool get productsOrNot;
@@ -2026,6 +2457,8 @@ abstract class _ProductState implements ProductState {
   bool get displayCartButton;
   @override
   int get cartItemItemQuantity;
+  @override
+  int get totalProductPrice;
   @override
   @JsonKey(ignore: true)
   _$$_ProductStateCopyWith<_$_ProductState> get copyWith =>

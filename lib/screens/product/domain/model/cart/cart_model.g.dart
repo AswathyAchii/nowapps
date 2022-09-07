@@ -13,6 +13,9 @@ _$_CartDataModel _$$_CartDataModelFromJson(Map<String, dynamic> json) =>
       productId: json['productId'] as String,
       retailerId: json['retailerId'] as String,
       quantity: json['quantity'] as String,
+      productName: json['productName'] as String,
+      productPrice: json['productPrice'] as String,
+      productImage: json['productImage'] as String,
     );
 
 Map<String, dynamic> _$$_CartDataModelToJson(_$_CartDataModel instance) =>
@@ -22,4 +25,7 @@ Map<String, dynamic> _$$_CartDataModelToJson(_$_CartDataModel instance) =>
       'productId': instance.productId,
       'retailerId': instance.retailerId,
       'quantity': instance.quantity,
+      'productName': instance.productName,
+      'productPrice': instance.productPrice,
+      'productImage': instance.productImage,
     };

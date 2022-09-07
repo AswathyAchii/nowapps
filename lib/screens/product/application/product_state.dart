@@ -18,6 +18,7 @@ class ProductState with _$ProductState {
     required String apiResponse,
     required bool displayCartButton,
     required int cartItemItemQuantity,
+    required int totalProductPrice,
   }) = _ProductState;
   factory ProductState.initial() {
     return ProductState(
@@ -32,6 +33,7 @@ class ProductState with _$ProductState {
       apiResponse: '',
       cartId: 0,
       orederId: 0,
+      totalProductPrice: 0,
     );
   }
 }

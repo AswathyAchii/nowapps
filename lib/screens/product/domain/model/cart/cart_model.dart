@@ -15,6 +15,9 @@ class CartDataModel with _$CartDataModel {
     required String productId,
     required String retailerId,
     required String quantity,
+    required String productName,
+    required String productPrice,
+    required String productImage,
   }) = _CartDataModel;
 
   factory CartDataModel.fromJson(Map<String, dynamic> json) =>
