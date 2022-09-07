@@ -10,11 +10,14 @@ part 'cart_model.g.dart';
 @freezed
 class CartDataModel with _$CartDataModel {
   const factory CartDataModel({
-    required int cartId,
-    required int orderId,
-    required int productId,
-    required int retailerId,
-    required int quantity,
+    required String cartId,
+    required String orderId,
+    required String productId,
+    required String retailerId,
+    required String quantity,
+    required String productName,
+    required String productPrice,
+    required String productImage,
   }) = _CartDataModel;
 
   factory CartDataModel.fromJson(Map<String, dynamic> json) =>

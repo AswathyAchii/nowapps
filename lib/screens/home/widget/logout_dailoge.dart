@@ -146,27 +146,27 @@ class LogoutDailog extends StatelessWidget {
   }
 
 // ------- Close button-------//
-  Padding closeButton(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        top: 8.0,
-        right: 9,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: const Icon(
+  GestureDetector closeButton(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.pop(context);
+      },
+      child: Padding(
+        padding: const EdgeInsets.only(
+          top: 8.0,
+          right: 9,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: const [
+            Icon(
               Icons.close,
               color: Colors.black,
               size: 20,
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

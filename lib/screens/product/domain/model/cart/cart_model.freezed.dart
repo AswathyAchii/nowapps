@@ -20,11 +20,14 @@ CartDataModel _$CartDataModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CartDataModel {
-  int get cartId => throw _privateConstructorUsedError;
-  int get orderId => throw _privateConstructorUsedError;
-  int get productId => throw _privateConstructorUsedError;
-  int get retailerId => throw _privateConstructorUsedError;
-  int get quantity => throw _privateConstructorUsedError;
+  String get cartId => throw _privateConstructorUsedError;
+  String get orderId => throw _privateConstructorUsedError;
+  String get productId => throw _privateConstructorUsedError;
+  String get retailerId => throw _privateConstructorUsedError;
+  String get quantity => throw _privateConstructorUsedError;
+  String get productName => throw _privateConstructorUsedError;
+  String get productPrice => throw _privateConstructorUsedError;
+  String get productImage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +41,14 @@ abstract class $CartDataModelCopyWith<$Res> {
           CartDataModel value, $Res Function(CartDataModel) then) =
       _$CartDataModelCopyWithImpl<$Res>;
   $Res call(
-      {int cartId, int orderId, int productId, int retailerId, int quantity});
+      {String cartId,
+      String orderId,
+      String productId,
+      String retailerId,
+      String quantity,
+      String productName,
+      String productPrice,
+      String productImage});
 }
 
 /// @nodoc
@@ -57,28 +67,43 @@ class _$CartDataModelCopyWithImpl<$Res>
     Object? productId = freezed,
     Object? retailerId = freezed,
     Object? quantity = freezed,
+    Object? productName = freezed,
+    Object? productPrice = freezed,
+    Object? productImage = freezed,
   }) {
     return _then(_value.copyWith(
       cartId: cartId == freezed
           ? _value.cartId
           : cartId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       orderId: orderId == freezed
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       productId: productId == freezed
           ? _value.productId
           : productId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       retailerId: retailerId == freezed
           ? _value.retailerId
           : retailerId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
+      productName: productName == freezed
+          ? _value.productName
+          : productName // ignore: cast_nullable_to_non_nullable
+              as String,
+      productPrice: productPrice == freezed
+          ? _value.productPrice
+          : productPrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      productImage: productImage == freezed
+          ? _value.productImage
+          : productImage // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -91,7 +116,14 @@ abstract class _$$_CartDataModelCopyWith<$Res>
       __$$_CartDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int cartId, int orderId, int productId, int retailerId, int quantity});
+      {String cartId,
+      String orderId,
+      String productId,
+      String retailerId,
+      String quantity,
+      String productName,
+      String productPrice,
+      String productImage});
 }
 
 /// @nodoc
@@ -112,28 +144,43 @@ class __$$_CartDataModelCopyWithImpl<$Res>
     Object? productId = freezed,
     Object? retailerId = freezed,
     Object? quantity = freezed,
+    Object? productName = freezed,
+    Object? productPrice = freezed,
+    Object? productImage = freezed,
   }) {
     return _then(_$_CartDataModel(
       cartId: cartId == freezed
           ? _value.cartId
           : cartId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       orderId: orderId == freezed
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       productId: productId == freezed
           ? _value.productId
           : productId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       retailerId: retailerId == freezed
           ? _value.retailerId
           : retailerId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
+      productName: productName == freezed
+          ? _value.productName
+          : productName // ignore: cast_nullable_to_non_nullable
+              as String,
+      productPrice: productPrice == freezed
+          ? _value.productPrice
+          : productPrice // ignore: cast_nullable_to_non_nullable
+              as String,
+      productImage: productImage == freezed
+          ? _value.productImage
+          : productImage // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -146,25 +193,34 @@ class _$_CartDataModel implements _CartDataModel {
       required this.orderId,
       required this.productId,
       required this.retailerId,
-      required this.quantity});
+      required this.quantity,
+      required this.productName,
+      required this.productPrice,
+      required this.productImage});
 
   factory _$_CartDataModel.fromJson(Map<String, dynamic> json) =>
       _$$_CartDataModelFromJson(json);
 
   @override
-  final int cartId;
+  final String cartId;
   @override
-  final int orderId;
+  final String orderId;
   @override
-  final int productId;
+  final String productId;
   @override
-  final int retailerId;
+  final String retailerId;
   @override
-  final int quantity;
+  final String quantity;
+  @override
+  final String productName;
+  @override
+  final String productPrice;
+  @override
+  final String productImage;
 
   @override
   String toString() {
-    return 'CartDataModel(cartId: $cartId, orderId: $orderId, productId: $productId, retailerId: $retailerId, quantity: $quantity)';
+    return 'CartDataModel(cartId: $cartId, orderId: $orderId, productId: $productId, retailerId: $retailerId, quantity: $quantity, productName: $productName, productPrice: $productPrice, productImage: $productImage)';
   }
 
   @override
@@ -177,7 +233,13 @@ class _$_CartDataModel implements _CartDataModel {
             const DeepCollectionEquality().equals(other.productId, productId) &&
             const DeepCollectionEquality()
                 .equals(other.retailerId, retailerId) &&
-            const DeepCollectionEquality().equals(other.quantity, quantity));
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
+            const DeepCollectionEquality()
+                .equals(other.productName, productName) &&
+            const DeepCollectionEquality()
+                .equals(other.productPrice, productPrice) &&
+            const DeepCollectionEquality()
+                .equals(other.productImage, productImage));
   }
 
   @JsonKey(ignore: true)
@@ -188,7 +250,10 @@ class _$_CartDataModel implements _CartDataModel {
       const DeepCollectionEquality().hash(orderId),
       const DeepCollectionEquality().hash(productId),
       const DeepCollectionEquality().hash(retailerId),
-      const DeepCollectionEquality().hash(quantity));
+      const DeepCollectionEquality().hash(quantity),
+      const DeepCollectionEquality().hash(productName),
+      const DeepCollectionEquality().hash(productPrice),
+      const DeepCollectionEquality().hash(productImage));
 
   @JsonKey(ignore: true)
   @override
@@ -205,25 +270,34 @@ class _$_CartDataModel implements _CartDataModel {
 
 abstract class _CartDataModel implements CartDataModel {
   const factory _CartDataModel(
-      {required final int cartId,
-      required final int orderId,
-      required final int productId,
-      required final int retailerId,
-      required final int quantity}) = _$_CartDataModel;
+      {required final String cartId,
+      required final String orderId,
+      required final String productId,
+      required final String retailerId,
+      required final String quantity,
+      required final String productName,
+      required final String productPrice,
+      required final String productImage}) = _$_CartDataModel;
 
   factory _CartDataModel.fromJson(Map<String, dynamic> json) =
       _$_CartDataModel.fromJson;
 
   @override
-  int get cartId;
+  String get cartId;
   @override
-  int get orderId;
+  String get orderId;
   @override
-  int get productId;
+  String get productId;
   @override
-  int get retailerId;
+  String get retailerId;
   @override
-  int get quantity;
+  String get quantity;
+  @override
+  String get productName;
+  @override
+  String get productPrice;
+  @override
+  String get productImage;
   @override
   @JsonKey(ignore: true)
   _$$_CartDataModelCopyWith<_$_CartDataModel> get copyWith =>

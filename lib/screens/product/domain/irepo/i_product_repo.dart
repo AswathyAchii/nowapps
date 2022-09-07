@@ -13,15 +13,23 @@ abstract class IProductRepo {
     required String retailerId,
   });
   Future<Either<ProductFailures, String>> addProductToCart({
-    required int productID,
-    required int retalierID,
+    required String productID,
+    required String retalierID,
+    required String cartID,
+    required String quantity,
+    required String orderId,
+    required String productName,
+    required String productPrice,
+    required String productImage,
   });
   Future<Either<ProductFailures, String>> deleteProductFromCart({
-    required int cartID,
+    required String cartID,
   });
   Future<Either<ProductFailures, String>> updateQuantityOfProductInCart({
     required int cartID,
     required int quantity,
+    required int productPrice,
   });
-  Future<Either<ProductFailures, List<CartDataModel>>> getCartItems();
+  Future<Either<ProductFailures, List<CartDataModel>>> getCartItems(
+      {required String retailerId});
 }

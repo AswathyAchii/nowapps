@@ -8,11 +8,14 @@ part of 'cart_model.dart';
 
 _$_CartDataModel _$$_CartDataModelFromJson(Map<String, dynamic> json) =>
     _$_CartDataModel(
-      cartId: json['cartId'] as int,
-      orderId: json['orderId'] as int,
-      productId: json['productId'] as int,
-      retailerId: json['retailerId'] as int,
-      quantity: json['quantity'] as int,
+      cartId: json['cartId'] as String,
+      orderId: json['orderId'] as String,
+      productId: json['productId'] as String,
+      retailerId: json['retailerId'] as String,
+      quantity: json['quantity'] as String,
+      productName: json['productName'] as String,
+      productPrice: json['productPrice'] as String,
+      productImage: json['productImage'] as String,
     );
 
 Map<String, dynamic> _$$_CartDataModelToJson(_$_CartDataModel instance) =>
@@ -22,4 +25,7 @@ Map<String, dynamic> _$$_CartDataModelToJson(_$_CartDataModel instance) =>
       'productId': instance.productId,
       'retailerId': instance.retailerId,
       'quantity': instance.quantity,
+      'productName': instance.productName,
+      'productPrice': instance.productPrice,
+      'productImage': instance.productImage,
     };

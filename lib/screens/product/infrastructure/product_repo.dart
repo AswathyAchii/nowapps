@@ -20,19 +20,34 @@ class ProductRepo extends IProductRepo {
   static const updateCARTQuantity = "UPDATE_CART_QUANT";
   static const deleteProductFromCART = "DELETE_PROD_CART";
   static const displayPRODUCT = "DISP_PRODUCT";
-  static const displayProductinCART = "DISP_PRODUCT_IN_CART";
+  static const displayProductinCART = "GET_CART_PRODUCTS";
 
   //----------------- ADD PRODUCT TO CART ----------------------//
   @override
-  Future<Either<ProductFailures, String>> addProductToCart(
-      {required int productID, required int retalierID}) async {
+  Future<Either<ProductFailures, String>> addProductToCart({
+    required String productID,
+    required String retalierID,
+    required String cartID,
+    required String quantity,
+    required String orderId,
+    required String productName,
+    required String productPrice,
+    required String productImage,
+  }) async {
     try {
       var map = <String, dynamic>{};
       map['action'] = addProductTOCART;
       map['productId'] = productID;
       map['retailerId'] = retalierID;
+      map['cartId'] = cartID;
+      map['orderId'] = orderId;
+      map['quantity'] = quantity;
+      map['productName'] = productName;
+      map['productPrice'] = productPrice;
+      map['productImage'] = productImage;
       final response = await http.post(Uri.parse(root), body: map);
       if (response.statusCode == 200 || response.statusCode == 201) {
+        print(response.body);
         return Right(response.body);
       } else {
         return const Left(ProductFailures.serverNotResponding());
@@ -46,7 +61,7 @@ class ProductRepo extends IProductRepo {
   //----------------- DELETE PRODUCT FROM CART ----------------------//
   @override
   Future<Either<ProductFailures, String>> deleteProductFromCart(
-      {required int cartID}) async {
+      {required String cartID}) async {
     try {
       var map = <String, dynamic>{};
       map['action'] = deleteProductFromCART;
@@ -65,17 +80,18 @@ class ProductRepo extends IProductRepo {
 
   //----------------- GET CART ITEMS ----------------------//
   @override
-  Future<Either<ProductFailures, List<CartDataModel>>> getCartItems() async {
+  Future<Either<ProductFailures, List<CartDataModel>>> getCartItems({
+    required String retailerId,
+  }) async {
     try {
       var map = <String, dynamic>{};
       map['action'] = displayProductinCART;
-
+      map['retailerId'] = retailerId;
       final response = await http.post(Uri.parse(root), body: map);
       if (response.statusCode == 200 || response.statusCode == 201) {
         final List<CartDataModel> cartProducts = [];
-        debugPrint("hi");
         final data = jsonDecode(response.body);
-        print(data);
+        print("Cart :$data");
 
         for (var datas in data) {
           final CartDataModel cartProduct = CartDataModel.fromJson(datas);
@@ -122,15 +138,19 @@ class ProductRepo extends IProductRepo {
 
   //----------------- UPDATE PRODUCT IN CART ----------------------//
   @override
-  Future<Either<ProductFailures, String>> updateQuantityOfProductInCart(
-      {required int cartID, required int quantity}) async {
+  Future<Either<ProductFailures, String>> updateQuantityOfProductInCart({
+    required int cartID,
+    required int quantity,
+    required int productPrice,
+  }) async {
     try {
       var map = <String, dynamic>{};
       map['action'] = updateCARTQuantity;
-      map['cartId'] = cartID;
-      map['quantity'] = quantity;
+      map['cartId'] = cartID.toString();
+      map['quantity'] = quantity.toString();
       final response = await http.post(Uri.parse(root), body: map);
       if (response.statusCode == 200 || response.statusCode == 201) {
+        print(response.body);
         return Right(response.body);
       } else {
         return const Left(ProductFailures.serverNotResponding());

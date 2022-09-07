@@ -7,7 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:now_apps/core/constants.dart';
+import 'package:now_apps/router/router.dart';
 import 'package:now_apps/screens/product/application/product_bloc.dart';
+import 'package:now_apps/screens/product/widget/product_descr/product_description.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage({Key? key}) : super(key: key);
@@ -37,72 +39,94 @@ class ProductPage extends StatelessWidget {
           return ListView.builder(
             itemCount: state.productDataModel!.length,
             itemBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.only(
-                    left: 29.0, right: 29.0, bottom: 30.0),
-                child: Container(
-                  height: 100,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: const Color.fromRGBO(209, 207, 207, 1),
-                      width: 1,
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    FadePageRoute(
+                      widget: ProductDescription(
+                        title: state.productDataModel![index].productName!,
+                        image: state.productDataModel![index].productImage!,
+                        productCode:
+                            state.productDataModel![index].productCode!,
+                        mrp: state.productDataModel![index].prodMrp,
+                        sellPrice: state.productDataModel![index].prodSell!,
+                        productId: state.productDataModel![index].productid,
+                        retailerId: state.retailerID,
+                      ),
+                      alignment: Alignment.bottomRight,
+                      curve: Curves.ease,
                     ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Container(
-                            color: Colors.white,
-                            child: Image.network(
-                                state.productDataModel![index].productImage!),
-                          ),
-                        ),
-                        kWidth10,
-                        Expanded(
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      left: 29.0, right: 29.0, bottom: 30.0),
+                  child: Container(
+                    height: 100,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: const Color.fromRGBO(209, 207, 207, 1),
+                        width: 1,
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        children: [
+                          Expanded(
                             flex: 2,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 8.0),
-                                  child: Text(
-                                    state.productDataModel![index].productName!,
+                            child: Container(
+                              color: Colors.white,
+                              child: Image.network(
+                                  state.productDataModel![index].productImage!),
+                            ),
+                          ),
+                          kWidth10,
+                          Expanded(
+                              flex: 2,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 8.0),
+                                    child: Text(
+                                      state.productDataModel![index]
+                                          .productName!,
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: GoogleFonts.redHatDisplay(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ),
+                                  Text(
+                                    state.productDataModel![index].prodMrp!,
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: GoogleFonts.redHatDisplay(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w700,
+                                      fontSize: 9,
+                                      fontWeight: FontWeight.w400,
                                     ),
                                   ),
-                                ),
-                                Text(
-                                  state.productDataModel![index].prodMrp!,
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: GoogleFonts.redHatDisplay(
-                                    fontSize: 9,
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 16.0),
-                                  child: Text(
-                                    state.productDataModel![index].prodSell
-                                        .toString(),
-                                    style: GoogleFonts.redHatDisplay(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w500,
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 16.0),
+                                    child: Text(
+                                      state.productDataModel![index].prodSell
+                                          .toString(),
+                                      style: GoogleFonts.redHatDisplay(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            )),
-                      ],
+                                ],
+                              )),
+                        ],
+                      ),
                     ),
                   ),
                 ),
