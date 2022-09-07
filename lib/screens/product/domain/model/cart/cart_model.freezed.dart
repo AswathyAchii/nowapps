@@ -20,11 +20,11 @@ CartDataModel _$CartDataModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CartDataModel {
-  int get cartId => throw _privateConstructorUsedError;
-  int get orderId => throw _privateConstructorUsedError;
-  int get productId => throw _privateConstructorUsedError;
-  int get retailerId => throw _privateConstructorUsedError;
-  int get quantity => throw _privateConstructorUsedError;
+  String get cartId => throw _privateConstructorUsedError;
+  String get orderId => throw _privateConstructorUsedError;
+  String get productId => throw _privateConstructorUsedError;
+  String get retailerId => throw _privateConstructorUsedError;
+  String get quantity => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +38,11 @@ abstract class $CartDataModelCopyWith<$Res> {
           CartDataModel value, $Res Function(CartDataModel) then) =
       _$CartDataModelCopyWithImpl<$Res>;
   $Res call(
-      {int cartId, int orderId, int productId, int retailerId, int quantity});
+      {String cartId,
+      String orderId,
+      String productId,
+      String retailerId,
+      String quantity});
 }
 
 /// @nodoc
@@ -62,23 +66,23 @@ class _$CartDataModelCopyWithImpl<$Res>
       cartId: cartId == freezed
           ? _value.cartId
           : cartId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       orderId: orderId == freezed
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       productId: productId == freezed
           ? _value.productId
           : productId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       retailerId: retailerId == freezed
           ? _value.retailerId
           : retailerId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -91,7 +95,11 @@ abstract class _$$_CartDataModelCopyWith<$Res>
       __$$_CartDataModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int cartId, int orderId, int productId, int retailerId, int quantity});
+      {String cartId,
+      String orderId,
+      String productId,
+      String retailerId,
+      String quantity});
 }
 
 /// @nodoc
@@ -117,23 +125,23 @@ class __$$_CartDataModelCopyWithImpl<$Res>
       cartId: cartId == freezed
           ? _value.cartId
           : cartId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       orderId: orderId == freezed
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       productId: productId == freezed
           ? _value.productId
           : productId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       retailerId: retailerId == freezed
           ? _value.retailerId
           : retailerId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -152,15 +160,15 @@ class _$_CartDataModel implements _CartDataModel {
       _$$_CartDataModelFromJson(json);
 
   @override
-  final int cartId;
+  final String cartId;
   @override
-  final int orderId;
+  final String orderId;
   @override
-  final int productId;
+  final String productId;
   @override
-  final int retailerId;
+  final String retailerId;
   @override
-  final int quantity;
+  final String quantity;
 
   @override
   String toString() {
@@ -205,25 +213,25 @@ class _$_CartDataModel implements _CartDataModel {
 
 abstract class _CartDataModel implements CartDataModel {
   const factory _CartDataModel(
-      {required final int cartId,
-      required final int orderId,
-      required final int productId,
-      required final int retailerId,
-      required final int quantity}) = _$_CartDataModel;
+      {required final String cartId,
+      required final String orderId,
+      required final String productId,
+      required final String retailerId,
+      required final String quantity}) = _$_CartDataModel;
 
   factory _CartDataModel.fromJson(Map<String, dynamic> json) =
       _$_CartDataModel.fromJson;
 
   @override
-  int get cartId;
+  String get cartId;
   @override
-  int get orderId;
+  String get orderId;
   @override
-  int get productId;
+  String get productId;
   @override
-  int get retailerId;
+  String get retailerId;
   @override
-  int get quantity;
+  String get quantity;
   @override
   @JsonKey(ignore: true)
   _$$_CartDataModelCopyWith<_$_CartDataModel> get copyWith =>

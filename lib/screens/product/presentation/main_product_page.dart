@@ -6,9 +6,12 @@ Content: Page which displays products and cart of specific retailer and checkout
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:now_apps/router/router.dart';
+import 'package:now_apps/screens/home/presentation/home.dart';
 import 'package:now_apps/screens/product/application/product_bloc.dart';
 import 'package:now_apps/screens/product/presentation/cart_page.dart';
 import 'package:now_apps/screens/product/presentation/product_page.dart';
+import 'package:now_apps/screens/product/widget/checkout_dailog.dart';
 
 class MainProductPage extends StatelessWidget {
   const MainProductPage({
@@ -25,8 +28,8 @@ class MainProductPage extends StatelessWidget {
           body: SafeArea(
             child: Column(
               children: [
-                header(
-                    title), // retailer name and checkout butto  widgetHeading(state), // Product / Cart
+                header(title,
+                    context), // retailer name and checkout butto  widgetHeading(state), // Product / Cart
                 contentOfPage(state), // which shows productPage or cartPage
                 bottomNavigation(), // bottom navigation
               ],
@@ -118,7 +121,7 @@ class MainProductPage extends StatelessWidget {
   }
 
 //------retailer name and checkout button------//
-  Container header(String headingText) {
+  Container header(String headingText, BuildContext context) {
     return Container(
       height: 78,
       width: double.infinity,
@@ -142,7 +145,24 @@ class MainProductPage extends StatelessWidget {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                context.read<ProductBloc>().add(const ProductEvent.started());
+                context.read<ProductBloc>().add(
+                      const ProductEvent.productPageOrNot(productOrNot: true),
+                    );
+                Navigator.push(
+                    context,
+                    FadePageRoute(
+                        widget: const HomePage(),
+                        alignment: Alignment.center,
+                        curve: Curves.ease));
+                // showDialog(
+                //   context: context,
+                //   builder: ((context) {
+                //     return const CheckOutDailog();
+                //   }),
+                // );
+              },
               child: Text(
                 "Checkout",
                 style: GoogleFonts.redHatDisplay(

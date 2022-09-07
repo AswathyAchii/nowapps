@@ -6,17 +6,14 @@ also logout button is there
 */
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:now_apps/core/constants.dart';
-<<<<<<< HEAD
+import 'package:now_apps/core/styles.dart';
 import 'package:now_apps/router/router.dart';
 import 'package:now_apps/screens/home/application/home_bloc.dart';
+import 'package:now_apps/screens/home/widget/logout_dailoge.dart';
 import 'package:now_apps/screens/product/application/product_bloc.dart';
 import 'package:now_apps/screens/product/presentation/main_product_page.dart';
-=======
-import 'package:now_apps/core/styles.dart';
-import 'package:now_apps/screens/home/widget/logout_dailoge.dart';
->>>>>>> 831a73d2382f4a08883c8e035e83e157c6fefe7f
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -79,6 +76,9 @@ class HomePage extends StatelessWidget {
                 context
                     .read<ProductBloc>()
                     .add(const ProductEvent.getProduct(retailerId: '101'));
+                context
+                    .read<ProductBloc>()
+                    .add(const ProductEvent.getCartProducts(retailerId: '101'));
                 Navigator.push(
                   context,
                   FadePageRoute(
@@ -101,6 +101,9 @@ class HomePage extends StatelessWidget {
                 context
                     .read<ProductBloc>()
                     .add(const ProductEvent.getProduct(retailerId: '102'));
+                context
+                    .read<ProductBloc>()
+                    .add(const ProductEvent.getCartProducts(retailerId: '102'));
                 Navigator.push(
                   context,
                   FadePageRoute(
@@ -129,6 +132,8 @@ class HomePage extends StatelessWidget {
                   context
                       .read<ProductBloc>()
                       .add(const ProductEvent.getProduct(retailerId: '103'));
+                  context.read<ProductBloc>().add(
+                      const ProductEvent.getCartProducts(retailerId: '103'));
                   Navigator.push(
                     context,
                     FadePageRoute(
@@ -151,6 +156,8 @@ class HomePage extends StatelessWidget {
                   context
                       .read<ProductBloc>()
                       .add(const ProductEvent.getProduct(retailerId: '104'));
+                  context.read<ProductBloc>().add(
+                      const ProductEvent.getCartProducts(retailerId: '104'));
                   Navigator.push(
                     context,
                     FadePageRoute(
