@@ -9,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:now_apps/core/colors.dart';
 import 'package:now_apps/core/constants.dart';
 import 'package:now_apps/router/router.dart';
+import 'package:now_apps/screens/auth/application/authentication_bloc.dart';
 import 'package:now_apps/screens/home/presentation/home.dart';
 import 'package:now_apps/screens/product/application/product_bloc.dart';
 
@@ -96,6 +97,17 @@ class CheckOutDailog extends StatelessWidget {
       padding: const EdgeInsets.only(left: 36.0, right: 36.0, top: 18),
       child: GestureDetector(
         onTap: () {
+          context
+              .read<AuthenticationBloc>()
+              .add(AuthenticationEvent.getFeedBack(
+                feedBack: state.opinion,
+              ));
+          context
+              .read<AuthenticationBloc>()
+              .add(AuthenticationEvent.getCheckOutTime(
+                checkOutTime: DateTime.now(),
+                retailerId: state.retailerID,
+              ));
           Navigator.push(
               context,
               FadePageRoute(

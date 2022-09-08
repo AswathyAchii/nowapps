@@ -17,6 +17,9 @@ class AuthenticationState with _$AuthenticationState {
     final User? user,
     required String response1,
     required String response2,
+    required DateTime checkInTime,
+    required DateTime checkOutTime,
+    required String retailerId,
   }) = _AuthenticationState;
   factory AuthenticationState.initail() {
     return AuthenticationState(
@@ -33,6 +36,9 @@ class AuthenticationState with _$AuthenticationState {
       productFailureOrSuccessOption: none(),
       response1: '',
       response2: '',
+      checkInTime: DateTime.now(),
+      checkOutTime: DateTime.now(),
+      retailerId: '',
     );
   }
 }

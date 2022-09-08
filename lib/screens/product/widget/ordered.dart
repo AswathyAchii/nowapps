@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:now_apps/router/router.dart';
+import 'package:now_apps/screens/auth/application/authentication_bloc.dart';
 import 'package:now_apps/screens/home/presentation/home.dart';
 import 'package:now_apps/screens/product/application/product_bloc.dart';
 
@@ -12,15 +13,19 @@ class OrderPlaced extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            heading(),
-            centerImage(),
-            checkoutButton(context),
-            goBackButton(context)
-          ],
+        child: BlocBuilder<ProductBloc, ProductState>(
+          builder: (context, state) {
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                heading(),
+                centerImage(),
+                checkoutButton(context, state),
+                goBackButton(context)
+              ],
+            );
+          },
         ),
       ),
     );
@@ -98,7 +103,7 @@ class OrderPlaced extends StatelessWidget {
     );
   }
 
-  Padding checkoutButton(BuildContext context) {
+  Padding checkoutButton(BuildContext context, ProductState state) {
     return Padding(
       padding: const EdgeInsets.only(
         left: 57.0,
@@ -108,6 +113,17 @@ class OrderPlaced extends StatelessWidget {
       ),
       child: GestureDetector(
         onTap: () {
+          context
+              .read<AuthenticationBloc>()
+              .add(AuthenticationEvent.getFeedBack(
+                feedBack: state.opinion,
+              ));
+          context
+              .read<AuthenticationBloc>()
+              .add(AuthenticationEvent.getCheckOutTime(
+                checkOutTime: DateTime.now(),
+                retailerId: state.retailerID,
+              ));
           Navigator.push(
               context,
               FadePageRoute(

@@ -8,6 +8,8 @@ class HomeState with _$HomeState {
     final List<RetailerDataModel>? retailerDataModel,
   }) = _HomeState;
   factory HomeState.initial() {
-    return HomeState(retailerFailureOrSuccessOption: none());
+    return HomeState(
+      retailerFailureOrSuccessOption: none(),
+    );
   }
 }
