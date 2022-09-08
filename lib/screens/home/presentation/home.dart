@@ -10,6 +10,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:now_apps/core/constants.dart';
 import 'package:now_apps/core/styles.dart';
 import 'package:now_apps/router/router.dart';
+import 'package:now_apps/screens/auth/application/authentication_bloc.dart';
 import 'package:now_apps/screens/home/application/home_bloc.dart';
 import 'package:now_apps/screens/home/widget/logout_dailoge.dart';
 import 'package:now_apps/screens/product/application/product_bloc.dart';
@@ -74,6 +75,12 @@ class HomePage extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 context
+                    .read<AuthenticationBloc>()
+                    .add(AuthenticationEvent.getCHeckInTime(
+                      checkInTime: DateTime.now(),
+                      retailerId: '101',
+                    ));
+                context
                     .read<ProductBloc>()
                     .add(const ProductEvent.getProduct(retailerId: '101'));
                 context
@@ -98,6 +105,12 @@ class HomePage extends StatelessWidget {
             kWidth25,
             GestureDetector(
               onTap: () {
+                context
+                    .read<AuthenticationBloc>()
+                    .add(AuthenticationEvent.getCHeckInTime(
+                      checkInTime: DateTime.now(),
+                      retailerId: '102',
+                    ));
                 context
                     .read<ProductBloc>()
                     .add(const ProductEvent.getProduct(retailerId: '102'));
@@ -130,6 +143,12 @@ class HomePage extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   context
+                      .read<AuthenticationBloc>()
+                      .add(AuthenticationEvent.getCHeckInTime(
+                        checkInTime: DateTime.now(),
+                        retailerId: '103',
+                      ));
+                  context
                       .read<ProductBloc>()
                       .add(const ProductEvent.getProduct(retailerId: '103'));
                   context.read<ProductBloc>().add(
@@ -153,6 +172,12 @@ class HomePage extends StatelessWidget {
               kWidth25,
               GestureDetector(
                 onTap: () {
+                  context
+                      .read<AuthenticationBloc>()
+                      .add(AuthenticationEvent.getCHeckInTime(
+                        checkInTime: DateTime.now(),
+                        retailerId: '104',
+                      ));
                   context
                       .read<ProductBloc>()
                       .add(const ProductEvent.getProduct(retailerId: '104'));

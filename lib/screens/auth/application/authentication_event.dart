@@ -16,4 +16,16 @@ class AuthenticationEvent with _$AuthenticationEvent {
     required String otp,
   }) = _GetOtp;
   const factory AuthenticationEvent.resendOtp() = _ResendOtp;
+  const factory AuthenticationEvent.getCHeckInTime({
+    required DateTime checkInTime,
+    required String retailerId,
+  }) = _GetCHeckInTime;
+  const factory AuthenticationEvent.getCheckOutTime({
+    required DateTime checkOutTime,
+    required String retailerId,
+  }) = _GetCheckOutTime;
+
+  const factory AuthenticationEvent.getFeedBack({
+    required String feedBack,
+  }) = _GetFeedBack;
 }

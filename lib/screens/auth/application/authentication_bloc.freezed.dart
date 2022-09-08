@@ -25,6 +25,11 @@ mixin _$AuthenticationEvent {
     required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
+    required TResult Function(DateTime checkInTime, String retailerId)
+        getCHeckInTime,
+    required TResult Function(DateTime checkOutTime, String retailerId)
+        getCheckOutTime,
+    required TResult Function(String feedBack) getFeedBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +41,9 @@ mixin _$AuthenticationEvent {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +55,9 @@ mixin _$AuthenticationEvent {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +70,9 @@ mixin _$AuthenticationEvent {
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_GetCHeckInTime value) getCHeckInTime,
+    required TResult Function(_GetCheckOutTime value) getCheckOutTime,
+    required TResult Function(_GetFeedBack value) getFeedBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +84,9 @@ mixin _$AuthenticationEvent {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +98,9 @@ mixin _$AuthenticationEvent {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -150,6 +170,11 @@ class _$_Started implements _Started {
     required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
+    required TResult Function(DateTime checkInTime, String retailerId)
+        getCHeckInTime,
+    required TResult Function(DateTime checkOutTime, String retailerId)
+        getCheckOutTime,
+    required TResult Function(String feedBack) getFeedBack,
   }) {
     return started();
   }
@@ -164,6 +189,9 @@ class _$_Started implements _Started {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
   }) {
     return started?.call();
   }
@@ -178,6 +206,9 @@ class _$_Started implements _Started {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -196,6 +227,9 @@ class _$_Started implements _Started {
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_GetCHeckInTime value) getCHeckInTime,
+    required TResult Function(_GetCheckOutTime value) getCheckOutTime,
+    required TResult Function(_GetFeedBack value) getFeedBack,
   }) {
     return started(this);
   }
@@ -210,6 +244,9 @@ class _$_Started implements _Started {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
   }) {
     return started?.call(this);
   }
@@ -224,6 +261,9 @@ class _$_Started implements _Started {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -310,6 +350,11 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
+    required TResult Function(DateTime checkInTime, String retailerId)
+        getCHeckInTime,
+    required TResult Function(DateTime checkOutTime, String retailerId)
+        getCheckOutTime,
+    required TResult Function(String feedBack) getFeedBack,
   }) {
     return otpSendOrNot(this.otpSendOrNot);
   }
@@ -324,6 +369,9 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
   }) {
     return otpSendOrNot?.call(this.otpSendOrNot);
   }
@@ -338,6 +386,9 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
     required TResult orElse(),
   }) {
     if (otpSendOrNot != null) {
@@ -356,6 +407,9 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_GetCHeckInTime value) getCHeckInTime,
+    required TResult Function(_GetCheckOutTime value) getCheckOutTime,
+    required TResult Function(_GetFeedBack value) getFeedBack,
   }) {
     return otpSendOrNot(this);
   }
@@ -370,6 +424,9 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
   }) {
     return otpSendOrNot?.call(this);
   }
@@ -384,6 +441,9 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
     required TResult orElse(),
   }) {
     if (otpSendOrNot != null) {
@@ -476,6 +536,11 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
+    required TResult Function(DateTime checkInTime, String retailerId)
+        getCHeckInTime,
+    required TResult Function(DateTime checkOutTime, String retailerId)
+        getCheckOutTime,
+    required TResult Function(String feedBack) getFeedBack,
   }) {
     return getMobileNumber(mobileNumber);
   }
@@ -490,6 +555,9 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
   }) {
     return getMobileNumber?.call(mobileNumber);
   }
@@ -504,6 +572,9 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
     required TResult orElse(),
   }) {
     if (getMobileNumber != null) {
@@ -522,6 +593,9 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_GetCHeckInTime value) getCHeckInTime,
+    required TResult Function(_GetCheckOutTime value) getCheckOutTime,
+    required TResult Function(_GetFeedBack value) getFeedBack,
   }) {
     return getMobileNumber(this);
   }
@@ -536,6 +610,9 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
   }) {
     return getMobileNumber?.call(this);
   }
@@ -550,6 +627,9 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
     required TResult orElse(),
   }) {
     if (getMobileNumber != null) {
@@ -617,6 +697,11 @@ class _$_VerifyPhone implements _VerifyPhone {
     required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
+    required TResult Function(DateTime checkInTime, String retailerId)
+        getCHeckInTime,
+    required TResult Function(DateTime checkOutTime, String retailerId)
+        getCheckOutTime,
+    required TResult Function(String feedBack) getFeedBack,
   }) {
     return verifyPhone();
   }
@@ -631,6 +716,9 @@ class _$_VerifyPhone implements _VerifyPhone {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
   }) {
     return verifyPhone?.call();
   }
@@ -645,6 +733,9 @@ class _$_VerifyPhone implements _VerifyPhone {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
     required TResult orElse(),
   }) {
     if (verifyPhone != null) {
@@ -663,6 +754,9 @@ class _$_VerifyPhone implements _VerifyPhone {
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_GetCHeckInTime value) getCHeckInTime,
+    required TResult Function(_GetCheckOutTime value) getCheckOutTime,
+    required TResult Function(_GetFeedBack value) getFeedBack,
   }) {
     return verifyPhone(this);
   }
@@ -677,6 +771,9 @@ class _$_VerifyPhone implements _VerifyPhone {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
   }) {
     return verifyPhone?.call(this);
   }
@@ -691,6 +788,9 @@ class _$_VerifyPhone implements _VerifyPhone {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
     required TResult orElse(),
   }) {
     if (verifyPhone != null) {
@@ -752,6 +852,11 @@ class _$_VerifyOtp implements _VerifyOtp {
     required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
+    required TResult Function(DateTime checkInTime, String retailerId)
+        getCHeckInTime,
+    required TResult Function(DateTime checkOutTime, String retailerId)
+        getCheckOutTime,
+    required TResult Function(String feedBack) getFeedBack,
   }) {
     return verifyOtp();
   }
@@ -766,6 +871,9 @@ class _$_VerifyOtp implements _VerifyOtp {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
   }) {
     return verifyOtp?.call();
   }
@@ -780,6 +888,9 @@ class _$_VerifyOtp implements _VerifyOtp {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
     required TResult orElse(),
   }) {
     if (verifyOtp != null) {
@@ -798,6 +909,9 @@ class _$_VerifyOtp implements _VerifyOtp {
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_GetCHeckInTime value) getCHeckInTime,
+    required TResult Function(_GetCheckOutTime value) getCheckOutTime,
+    required TResult Function(_GetFeedBack value) getFeedBack,
   }) {
     return verifyOtp(this);
   }
@@ -812,6 +926,9 @@ class _$_VerifyOtp implements _VerifyOtp {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
   }) {
     return verifyOtp?.call(this);
   }
@@ -826,6 +943,9 @@ class _$_VerifyOtp implements _VerifyOtp {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
     required TResult orElse(),
   }) {
     if (verifyOtp != null) {
@@ -909,6 +1029,11 @@ class _$_GetOtp implements _GetOtp {
     required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
+    required TResult Function(DateTime checkInTime, String retailerId)
+        getCHeckInTime,
+    required TResult Function(DateTime checkOutTime, String retailerId)
+        getCheckOutTime,
+    required TResult Function(String feedBack) getFeedBack,
   }) {
     return getOtp(otp);
   }
@@ -923,6 +1048,9 @@ class _$_GetOtp implements _GetOtp {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
   }) {
     return getOtp?.call(otp);
   }
@@ -937,6 +1065,9 @@ class _$_GetOtp implements _GetOtp {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
     required TResult orElse(),
   }) {
     if (getOtp != null) {
@@ -955,6 +1086,9 @@ class _$_GetOtp implements _GetOtp {
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_GetCHeckInTime value) getCHeckInTime,
+    required TResult Function(_GetCheckOutTime value) getCheckOutTime,
+    required TResult Function(_GetFeedBack value) getFeedBack,
   }) {
     return getOtp(this);
   }
@@ -969,6 +1103,9 @@ class _$_GetOtp implements _GetOtp {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
   }) {
     return getOtp?.call(this);
   }
@@ -983,6 +1120,9 @@ class _$_GetOtp implements _GetOtp {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
     required TResult orElse(),
   }) {
     if (getOtp != null) {
@@ -1049,6 +1189,11 @@ class _$_ResendOtp implements _ResendOtp {
     required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
+    required TResult Function(DateTime checkInTime, String retailerId)
+        getCHeckInTime,
+    required TResult Function(DateTime checkOutTime, String retailerId)
+        getCheckOutTime,
+    required TResult Function(String feedBack) getFeedBack,
   }) {
     return resendOtp();
   }
@@ -1063,6 +1208,9 @@ class _$_ResendOtp implements _ResendOtp {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
   }) {
     return resendOtp?.call();
   }
@@ -1077,6 +1225,9 @@ class _$_ResendOtp implements _ResendOtp {
     TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
     required TResult orElse(),
   }) {
     if (resendOtp != null) {
@@ -1095,6 +1246,9 @@ class _$_ResendOtp implements _ResendOtp {
     required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_GetCHeckInTime value) getCHeckInTime,
+    required TResult Function(_GetCheckOutTime value) getCheckOutTime,
+    required TResult Function(_GetFeedBack value) getFeedBack,
   }) {
     return resendOtp(this);
   }
@@ -1109,6 +1263,9 @@ class _$_ResendOtp implements _ResendOtp {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
   }) {
     return resendOtp?.call(this);
   }
@@ -1123,6 +1280,9 @@ class _$_ResendOtp implements _ResendOtp {
     TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
     required TResult orElse(),
   }) {
     if (resendOtp != null) {
@@ -1134,6 +1294,590 @@ class _$_ResendOtp implements _ResendOtp {
 
 abstract class _ResendOtp implements AuthenticationEvent {
   const factory _ResendOtp() = _$_ResendOtp;
+}
+
+/// @nodoc
+abstract class _$$_GetCHeckInTimeCopyWith<$Res> {
+  factory _$$_GetCHeckInTimeCopyWith(
+          _$_GetCHeckInTime value, $Res Function(_$_GetCHeckInTime) then) =
+      __$$_GetCHeckInTimeCopyWithImpl<$Res>;
+  $Res call({DateTime checkInTime, String retailerId});
+}
+
+/// @nodoc
+class __$$_GetCHeckInTimeCopyWithImpl<$Res>
+    extends _$AuthenticationEventCopyWithImpl<$Res>
+    implements _$$_GetCHeckInTimeCopyWith<$Res> {
+  __$$_GetCHeckInTimeCopyWithImpl(
+      _$_GetCHeckInTime _value, $Res Function(_$_GetCHeckInTime) _then)
+      : super(_value, (v) => _then(v as _$_GetCHeckInTime));
+
+  @override
+  _$_GetCHeckInTime get _value => super._value as _$_GetCHeckInTime;
+
+  @override
+  $Res call({
+    Object? checkInTime = freezed,
+    Object? retailerId = freezed,
+  }) {
+    return _then(_$_GetCHeckInTime(
+      checkInTime: checkInTime == freezed
+          ? _value.checkInTime
+          : checkInTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      retailerId: retailerId == freezed
+          ? _value.retailerId
+          : retailerId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GetCHeckInTime implements _GetCHeckInTime {
+  const _$_GetCHeckInTime(
+      {required this.checkInTime, required this.retailerId});
+
+  @override
+  final DateTime checkInTime;
+  @override
+  final String retailerId;
+
+  @override
+  String toString() {
+    return 'AuthenticationEvent.getCHeckInTime(checkInTime: $checkInTime, retailerId: $retailerId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetCHeckInTime &&
+            const DeepCollectionEquality()
+                .equals(other.checkInTime, checkInTime) &&
+            const DeepCollectionEquality()
+                .equals(other.retailerId, retailerId));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(checkInTime),
+      const DeepCollectionEquality().hash(retailerId));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_GetCHeckInTimeCopyWith<_$_GetCHeckInTime> get copyWith =>
+      __$$_GetCHeckInTimeCopyWithImpl<_$_GetCHeckInTime>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool otpSendOrNot) otpSendOrNot,
+    required TResult Function(String mobileNumber) getMobileNumber,
+    required TResult Function() verifyPhone,
+    required TResult Function() verifyOtp,
+    required TResult Function(String otp) getOtp,
+    required TResult Function() resendOtp,
+    required TResult Function(DateTime checkInTime, String retailerId)
+        getCHeckInTime,
+    required TResult Function(DateTime checkOutTime, String retailerId)
+        getCheckOutTime,
+    required TResult Function(String feedBack) getFeedBack,
+  }) {
+    return getCHeckInTime(checkInTime, retailerId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool otpSendOrNot)? otpSendOrNot,
+    TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
+    TResult Function(String otp)? getOtp,
+    TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
+  }) {
+    return getCHeckInTime?.call(checkInTime, retailerId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool otpSendOrNot)? otpSendOrNot,
+    TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
+    TResult Function(String otp)? getOtp,
+    TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
+    required TResult orElse(),
+  }) {
+    if (getCHeckInTime != null) {
+      return getCHeckInTime(checkInTime, retailerId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_OtpSendOrNot value) otpSendOrNot,
+    required TResult Function(_GetMobileNumber value) getMobileNumber,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_GetOtp value) getOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_GetCHeckInTime value) getCHeckInTime,
+    required TResult Function(_GetCheckOutTime value) getCheckOutTime,
+    required TResult Function(_GetFeedBack value) getFeedBack,
+  }) {
+    return getCHeckInTime(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OtpSendOrNot value)? otpSendOrNot,
+    TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_GetOtp value)? getOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
+  }) {
+    return getCHeckInTime?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OtpSendOrNot value)? otpSendOrNot,
+    TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_GetOtp value)? getOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
+    required TResult orElse(),
+  }) {
+    if (getCHeckInTime != null) {
+      return getCHeckInTime(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetCHeckInTime implements AuthenticationEvent {
+  const factory _GetCHeckInTime(
+      {required final DateTime checkInTime,
+      required final String retailerId}) = _$_GetCHeckInTime;
+
+  DateTime get checkInTime;
+  String get retailerId;
+  @JsonKey(ignore: true)
+  _$$_GetCHeckInTimeCopyWith<_$_GetCHeckInTime> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_GetCheckOutTimeCopyWith<$Res> {
+  factory _$$_GetCheckOutTimeCopyWith(
+          _$_GetCheckOutTime value, $Res Function(_$_GetCheckOutTime) then) =
+      __$$_GetCheckOutTimeCopyWithImpl<$Res>;
+  $Res call({DateTime checkOutTime, String retailerId});
+}
+
+/// @nodoc
+class __$$_GetCheckOutTimeCopyWithImpl<$Res>
+    extends _$AuthenticationEventCopyWithImpl<$Res>
+    implements _$$_GetCheckOutTimeCopyWith<$Res> {
+  __$$_GetCheckOutTimeCopyWithImpl(
+      _$_GetCheckOutTime _value, $Res Function(_$_GetCheckOutTime) _then)
+      : super(_value, (v) => _then(v as _$_GetCheckOutTime));
+
+  @override
+  _$_GetCheckOutTime get _value => super._value as _$_GetCheckOutTime;
+
+  @override
+  $Res call({
+    Object? checkOutTime = freezed,
+    Object? retailerId = freezed,
+  }) {
+    return _then(_$_GetCheckOutTime(
+      checkOutTime: checkOutTime == freezed
+          ? _value.checkOutTime
+          : checkOutTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      retailerId: retailerId == freezed
+          ? _value.retailerId
+          : retailerId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GetCheckOutTime implements _GetCheckOutTime {
+  const _$_GetCheckOutTime(
+      {required this.checkOutTime, required this.retailerId});
+
+  @override
+  final DateTime checkOutTime;
+  @override
+  final String retailerId;
+
+  @override
+  String toString() {
+    return 'AuthenticationEvent.getCheckOutTime(checkOutTime: $checkOutTime, retailerId: $retailerId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetCheckOutTime &&
+            const DeepCollectionEquality()
+                .equals(other.checkOutTime, checkOutTime) &&
+            const DeepCollectionEquality()
+                .equals(other.retailerId, retailerId));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(checkOutTime),
+      const DeepCollectionEquality().hash(retailerId));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_GetCheckOutTimeCopyWith<_$_GetCheckOutTime> get copyWith =>
+      __$$_GetCheckOutTimeCopyWithImpl<_$_GetCheckOutTime>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool otpSendOrNot) otpSendOrNot,
+    required TResult Function(String mobileNumber) getMobileNumber,
+    required TResult Function() verifyPhone,
+    required TResult Function() verifyOtp,
+    required TResult Function(String otp) getOtp,
+    required TResult Function() resendOtp,
+    required TResult Function(DateTime checkInTime, String retailerId)
+        getCHeckInTime,
+    required TResult Function(DateTime checkOutTime, String retailerId)
+        getCheckOutTime,
+    required TResult Function(String feedBack) getFeedBack,
+  }) {
+    return getCheckOutTime(checkOutTime, retailerId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool otpSendOrNot)? otpSendOrNot,
+    TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
+    TResult Function(String otp)? getOtp,
+    TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
+  }) {
+    return getCheckOutTime?.call(checkOutTime, retailerId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool otpSendOrNot)? otpSendOrNot,
+    TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
+    TResult Function(String otp)? getOtp,
+    TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
+    required TResult orElse(),
+  }) {
+    if (getCheckOutTime != null) {
+      return getCheckOutTime(checkOutTime, retailerId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_OtpSendOrNot value) otpSendOrNot,
+    required TResult Function(_GetMobileNumber value) getMobileNumber,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_GetOtp value) getOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_GetCHeckInTime value) getCHeckInTime,
+    required TResult Function(_GetCheckOutTime value) getCheckOutTime,
+    required TResult Function(_GetFeedBack value) getFeedBack,
+  }) {
+    return getCheckOutTime(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OtpSendOrNot value)? otpSendOrNot,
+    TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_GetOtp value)? getOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
+  }) {
+    return getCheckOutTime?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OtpSendOrNot value)? otpSendOrNot,
+    TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_GetOtp value)? getOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
+    required TResult orElse(),
+  }) {
+    if (getCheckOutTime != null) {
+      return getCheckOutTime(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetCheckOutTime implements AuthenticationEvent {
+  const factory _GetCheckOutTime(
+      {required final DateTime checkOutTime,
+      required final String retailerId}) = _$_GetCheckOutTime;
+
+  DateTime get checkOutTime;
+  String get retailerId;
+  @JsonKey(ignore: true)
+  _$$_GetCheckOutTimeCopyWith<_$_GetCheckOutTime> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_GetFeedBackCopyWith<$Res> {
+  factory _$$_GetFeedBackCopyWith(
+          _$_GetFeedBack value, $Res Function(_$_GetFeedBack) then) =
+      __$$_GetFeedBackCopyWithImpl<$Res>;
+  $Res call({String feedBack});
+}
+
+/// @nodoc
+class __$$_GetFeedBackCopyWithImpl<$Res>
+    extends _$AuthenticationEventCopyWithImpl<$Res>
+    implements _$$_GetFeedBackCopyWith<$Res> {
+  __$$_GetFeedBackCopyWithImpl(
+      _$_GetFeedBack _value, $Res Function(_$_GetFeedBack) _then)
+      : super(_value, (v) => _then(v as _$_GetFeedBack));
+
+  @override
+  _$_GetFeedBack get _value => super._value as _$_GetFeedBack;
+
+  @override
+  $Res call({
+    Object? feedBack = freezed,
+  }) {
+    return _then(_$_GetFeedBack(
+      feedBack: feedBack == freezed
+          ? _value.feedBack
+          : feedBack // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GetFeedBack implements _GetFeedBack {
+  const _$_GetFeedBack({required this.feedBack});
+
+  @override
+  final String feedBack;
+
+  @override
+  String toString() {
+    return 'AuthenticationEvent.getFeedBack(feedBack: $feedBack)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetFeedBack &&
+            const DeepCollectionEquality().equals(other.feedBack, feedBack));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(feedBack));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_GetFeedBackCopyWith<_$_GetFeedBack> get copyWith =>
+      __$$_GetFeedBackCopyWithImpl<_$_GetFeedBack>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool otpSendOrNot) otpSendOrNot,
+    required TResult Function(String mobileNumber) getMobileNumber,
+    required TResult Function() verifyPhone,
+    required TResult Function() verifyOtp,
+    required TResult Function(String otp) getOtp,
+    required TResult Function() resendOtp,
+    required TResult Function(DateTime checkInTime, String retailerId)
+        getCHeckInTime,
+    required TResult Function(DateTime checkOutTime, String retailerId)
+        getCheckOutTime,
+    required TResult Function(String feedBack) getFeedBack,
+  }) {
+    return getFeedBack(feedBack);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool otpSendOrNot)? otpSendOrNot,
+    TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
+    TResult Function(String otp)? getOtp,
+    TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
+  }) {
+    return getFeedBack?.call(feedBack);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool otpSendOrNot)? otpSendOrNot,
+    TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
+    TResult Function(String otp)? getOtp,
+    TResult Function()? resendOtp,
+    TResult Function(DateTime checkInTime, String retailerId)? getCHeckInTime,
+    TResult Function(DateTime checkOutTime, String retailerId)? getCheckOutTime,
+    TResult Function(String feedBack)? getFeedBack,
+    required TResult orElse(),
+  }) {
+    if (getFeedBack != null) {
+      return getFeedBack(feedBack);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_OtpSendOrNot value) otpSendOrNot,
+    required TResult Function(_GetMobileNumber value) getMobileNumber,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_GetOtp value) getOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+    required TResult Function(_GetCHeckInTime value) getCHeckInTime,
+    required TResult Function(_GetCheckOutTime value) getCheckOutTime,
+    required TResult Function(_GetFeedBack value) getFeedBack,
+  }) {
+    return getFeedBack(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OtpSendOrNot value)? otpSendOrNot,
+    TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_GetOtp value)? getOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
+  }) {
+    return getFeedBack?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OtpSendOrNot value)? otpSendOrNot,
+    TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_GetOtp value)? getOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    TResult Function(_GetCHeckInTime value)? getCHeckInTime,
+    TResult Function(_GetCheckOutTime value)? getCheckOutTime,
+    TResult Function(_GetFeedBack value)? getFeedBack,
+    required TResult orElse(),
+  }) {
+    if (getFeedBack != null) {
+      return getFeedBack(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetFeedBack implements AuthenticationEvent {
+  const factory _GetFeedBack({required final String feedBack}) = _$_GetFeedBack;
+
+  String get feedBack;
+  @JsonKey(ignore: true)
+  _$$_GetFeedBackCopyWith<_$_GetFeedBack> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1156,6 +1900,9 @@ mixin _$AuthenticationState {
   User? get user => throw _privateConstructorUsedError;
   String get response1 => throw _privateConstructorUsedError;
   String get response2 => throw _privateConstructorUsedError;
+  DateTime get checkInTime => throw _privateConstructorUsedError;
+  DateTime get checkOutTime => throw _privateConstructorUsedError;
+  String get retailerId => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AuthenticationStateCopyWith<AuthenticationState> get copyWith =>
@@ -1181,7 +1928,10 @@ abstract class $AuthenticationStateCopyWith<$Res> {
       String verificationId,
       User? user,
       String response1,
-      String response2});
+      String response2,
+      DateTime checkInTime,
+      DateTime checkOutTime,
+      String retailerId});
 }
 
 /// @nodoc
@@ -1209,6 +1959,9 @@ class _$AuthenticationStateCopyWithImpl<$Res>
     Object? user = freezed,
     Object? response1 = freezed,
     Object? response2 = freezed,
+    Object? checkInTime = freezed,
+    Object? checkOutTime = freezed,
+    Object? retailerId = freezed,
   }) {
     return _then(_value.copyWith(
       otpSendOrNot: otpSendOrNot == freezed
@@ -1267,6 +2020,18 @@ class _$AuthenticationStateCopyWithImpl<$Res>
           ? _value.response2
           : response2 // ignore: cast_nullable_to_non_nullable
               as String,
+      checkInTime: checkInTime == freezed
+          ? _value.checkInTime
+          : checkInTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      checkOutTime: checkOutTime == freezed
+          ? _value.checkOutTime
+          : checkOutTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      retailerId: retailerId == freezed
+          ? _value.retailerId
+          : retailerId // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1292,7 +2057,10 @@ abstract class _$$_AuthenticationStateCopyWith<$Res>
       String verificationId,
       User? user,
       String response1,
-      String response2});
+      String response2,
+      DateTime checkInTime,
+      DateTime checkOutTime,
+      String retailerId});
 }
 
 /// @nodoc
@@ -1322,6 +2090,9 @@ class __$$_AuthenticationStateCopyWithImpl<$Res>
     Object? user = freezed,
     Object? response1 = freezed,
     Object? response2 = freezed,
+    Object? checkInTime = freezed,
+    Object? checkOutTime = freezed,
+    Object? retailerId = freezed,
   }) {
     return _then(_$_AuthenticationState(
       otpSendOrNot: otpSendOrNot == freezed
@@ -1380,6 +2151,18 @@ class __$$_AuthenticationStateCopyWithImpl<$Res>
           ? _value.response2
           : response2 // ignore: cast_nullable_to_non_nullable
               as String,
+      checkInTime: checkInTime == freezed
+          ? _value.checkInTime
+          : checkInTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      checkOutTime: checkOutTime == freezed
+          ? _value.checkOutTime
+          : checkOutTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      retailerId: retailerId == freezed
+          ? _value.retailerId
+          : retailerId // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1401,7 +2184,10 @@ class _$_AuthenticationState implements _AuthenticationState {
       required this.verificationId,
       this.user,
       required this.response1,
-      required this.response2});
+      required this.response2,
+      required this.checkInTime,
+      required this.checkOutTime,
+      required this.retailerId});
 
   @override
   final bool otpSendOrNot;
@@ -1431,10 +2217,16 @@ class _$_AuthenticationState implements _AuthenticationState {
   final String response1;
   @override
   final String response2;
+  @override
+  final DateTime checkInTime;
+  @override
+  final DateTime checkOutTime;
+  @override
+  final String retailerId;
 
   @override
   String toString() {
-    return 'AuthenticationState(otpSendOrNot: $otpSendOrNot, mobileNumberController: $mobileNumberController, otpController: $otpController, otpTimercontroller: $otpTimercontroller, productFailureOrSuccessOption: $productFailureOrSuccessOption, cartFailureOrSuccessOption: $cartFailureOrSuccessOption, mobileNumber: $mobileNumber, otp: $otp, auth: $auth, otpVisibility: $otpVisibility, verificationId: $verificationId, user: $user, response1: $response1, response2: $response2)';
+    return 'AuthenticationState(otpSendOrNot: $otpSendOrNot, mobileNumberController: $mobileNumberController, otpController: $otpController, otpTimercontroller: $otpTimercontroller, productFailureOrSuccessOption: $productFailureOrSuccessOption, cartFailureOrSuccessOption: $cartFailureOrSuccessOption, mobileNumber: $mobileNumber, otp: $otp, auth: $auth, otpVisibility: $otpVisibility, verificationId: $verificationId, user: $user, response1: $response1, response2: $response2, checkInTime: $checkInTime, checkOutTime: $checkOutTime, retailerId: $retailerId)';
   }
 
   @override
@@ -1465,7 +2257,13 @@ class _$_AuthenticationState implements _AuthenticationState {
                 .equals(other.verificationId, verificationId) &&
             const DeepCollectionEquality().equals(other.user, user) &&
             const DeepCollectionEquality().equals(other.response1, response1) &&
-            const DeepCollectionEquality().equals(other.response2, response2));
+            const DeepCollectionEquality().equals(other.response2, response2) &&
+            const DeepCollectionEquality()
+                .equals(other.checkInTime, checkInTime) &&
+            const DeepCollectionEquality()
+                .equals(other.checkOutTime, checkOutTime) &&
+            const DeepCollectionEquality()
+                .equals(other.retailerId, retailerId));
   }
 
   @override
@@ -1484,7 +2282,10 @@ class _$_AuthenticationState implements _AuthenticationState {
       const DeepCollectionEquality().hash(verificationId),
       const DeepCollectionEquality().hash(user),
       const DeepCollectionEquality().hash(response1),
-      const DeepCollectionEquality().hash(response2));
+      const DeepCollectionEquality().hash(response2),
+      const DeepCollectionEquality().hash(checkInTime),
+      const DeepCollectionEquality().hash(checkOutTime),
+      const DeepCollectionEquality().hash(retailerId));
 
   @JsonKey(ignore: true)
   @override
@@ -1510,7 +2311,10 @@ abstract class _AuthenticationState implements AuthenticationState {
       required final String verificationId,
       final User? user,
       required final String response1,
-      required final String response2}) = _$_AuthenticationState;
+      required final String response2,
+      required final DateTime checkInTime,
+      required final DateTime checkOutTime,
+      required final String retailerId}) = _$_AuthenticationState;
 
   @override
   bool get otpSendOrNot;
@@ -1540,6 +2344,12 @@ abstract class _AuthenticationState implements AuthenticationState {
   String get response1;
   @override
   String get response2;
+  @override
+  DateTime get checkInTime;
+  @override
+  DateTime get checkOutTime;
+  @override
+  String get retailerId;
   @override
   @JsonKey(ignore: true)
   _$$_AuthenticationStateCopyWith<_$_AuthenticationState> get copyWith =>

@@ -52,15 +52,15 @@ class AuthenticationBloc
       );
     });
     on<_VerifyOtp>((event, emit) async {
-      // PhoneAuthCredential credential = PhoneAuthProvider.credential(
-      //     verificationId: verificationID!, smsCode: state.otpController.text);
+      PhoneAuthCredential credential = PhoneAuthProvider.credential(
+          verificationId: verificationID!, smsCode: state.otpController.text);
 
-      // await state.auth.signInWithCredential(credential).then(
-      //   (value) {
-      //     emit(state.copyWith(
-      //         user: FirebaseAuth.instance.currentUser, otpSendOrNot: false));
-      //   },
-      // );
+      await state.auth.signInWithCredential(credential).then(
+        (value) {
+          emit(state.copyWith(
+              user: FirebaseAuth.instance.currentUser, otpSendOrNot: false));
+        },
+      );
       final data = await iHomeRepo.addUser(
         mobileNumber: state.mobileNumberController.text,
       );
@@ -81,6 +81,41 @@ class AuthenticationBloc
       Future.delayed(const Duration(seconds: 60), () {
         state.otpTimercontroller.startTimer();
       });
+    });
+    on<_GetCHeckInTime>((event, emit) {
+      emit(
+        state.copyWith(
+          checkInTime: event.checkInTime,
+          retailerId: event.retailerId,
+        ),
+      );
+    });
+    on<_GetCheckOutTime>((event, emit) {
+      emit(
+        state.copyWith(
+          checkOutTime: event.checkOutTime,
+          retailerId: event.retailerId,
+        ),
+      );
+    });
+    on<_GetFeedBack>((event, emit) async {
+      final data = await iHomeRepo.addFeedback(
+        mobileNumber: state.mobileNumberController.text,
+        checkInTime: state.checkInTime.toString(),
+        checkOutTime: state.checkOutTime.toString(),
+        feedBack: event.feedBack,
+      );
+      emit(
+        data.fold(
+            (l) => state.copyWith(
+                  productFailureOrSuccessOption: none(),
+                  cartFailureOrSuccessOption: some(Left(l)),
+                ), (r) {
+          return state.copyWith(
+            response1: r,
+          );
+        }),
+      );
     });
   }
 }
