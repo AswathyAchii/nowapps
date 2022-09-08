@@ -9,7 +9,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:now_apps/core/constants.dart';
 import 'package:now_apps/core/styles.dart';
+import 'package:now_apps/router/router.dart';
 import 'package:now_apps/screens/auth/application/authentication_bloc.dart';
+import 'package:now_apps/screens/auth/presentation/get_mobile.dart';
 
 class LogoutDailog extends StatelessWidget {
   const LogoutDailog({Key? key}) : super(key: key);
@@ -45,7 +47,7 @@ class LogoutDailog extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     warningText(),
-                    logoutButton() //logout button
+                    logoutButton(context) //logout button
                   ],
                 ),
               ),
@@ -56,9 +58,21 @@ class LogoutDailog extends StatelessWidget {
     );
   }
 
-  GestureDetector logoutButton() {
+  GestureDetector logoutButton(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        context
+            .read<AuthenticationBloc>()
+            .add(const AuthenticationEvent.started());
+        Navigator.pop(context);
+        Navigator.pushReplacement(
+            context,
+            FadePageRoute(
+              widget: const GetMobileNumber(),
+              alignment: Alignment.center,
+              curve: Curves.ease,
+            ));
+      },
       child: Padding(
         padding: const EdgeInsets.only(
           left: 100,

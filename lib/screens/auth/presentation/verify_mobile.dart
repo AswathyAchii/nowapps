@@ -39,7 +39,8 @@ class VerifyOTP extends StatelessWidget {
                   verifyHeading(), //verify Heading
                   subHeading(state), // sub text with mobile number
                   otpTextFormField(context), // collect otp
-                  verifyButton(context), // verify otp on clicking this button
+                  verifyButton(
+                      context, state), // verify otp on clicking this button
                   resendOTPButton(context) // button to resend OTP
                 ],
               ),
@@ -85,6 +86,7 @@ class VerifyOTP extends StatelessWidget {
         bottom: 64.0,
       ),
       child: Pinput(
+        length: 6,
         controller: context.read<AuthenticationBloc>().state.otpController,
         mainAxisAlignment: MainAxisAlignment.center,
         defaultPinTheme: PinTheme(
@@ -99,19 +101,23 @@ class VerifyOTP extends StatelessWidget {
   }
 
 //--------Verify button---------//
-  GestureDetector verifyButton(BuildContext context) {
+  GestureDetector verifyButton(
+      BuildContext context, AuthenticationState state) {
     return GestureDetector(
       onTap: () {
-        context.read<HomeBloc>().add(const HomeEvent.getRetailers());
         context
             .read<AuthenticationBloc>()
-            .add(const AuthenticationEvent.otpSendOrNot(otpSendOrNot: false));
-        Navigator.pushReplacement(
-            context,
-            FadePageRoute(
+            .add(const AuthenticationEvent.verifyOtp());
+        context.read<HomeBloc>().add(const HomeEvent.getRetailers());
+        if (verificationID!.isNotEmpty) {
+          Navigator.pushReplacement(
+              context,
+              FadePageRoute(
                 widget: const HomePage(),
                 alignment: Alignment.bottomCenter,
-                curve: Curves.ease));
+                curve: Curves.ease,
+              ));
+        }
       },
       child: Padding(
         padding: const EdgeInsets.only(

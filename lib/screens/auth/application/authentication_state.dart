@@ -7,8 +7,16 @@ class AuthenticationState with _$AuthenticationState {
     required TextEditingController mobileNumberController,
     required TextEditingController otpController,
     required OtpTimerButtonController otpTimercontroller,
+    required Option<Either<Failures, String>> productFailureOrSuccessOption,
+    required Option<Either<Failures, String>> cartFailureOrSuccessOption,
     required String mobileNumber,
     required String otp,
+    required FirebaseAuth auth,
+    required bool otpVisibility,
+    required String verificationId,
+    final User? user,
+    required String response1,
+    required String response2,
   }) = _AuthenticationState;
   factory AuthenticationState.initail() {
     return AuthenticationState(
@@ -18,6 +26,13 @@ class AuthenticationState with _$AuthenticationState {
       otpController: TextEditingController(),
       otp: '',
       otpTimercontroller: OtpTimerButtonController(),
+      auth: FirebaseAuth.instance,
+      otpVisibility: false,
+      verificationId: '',
+      cartFailureOrSuccessOption: none(),
+      productFailureOrSuccessOption: none(),
+      response1: '',
+      response2: '',
     );
   }
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "566732904537",
+    "project_id": "nowapps-d0399",
+    "storage_bucket": "nowapps-d0399.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566732904537:android:3306d5f7b07bd5c9eb3948",
+        "android_client_info": {
+          "package_name": "com.example.now_apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566732904537-c4uore0bsckp0l8a3jr22pgi8no6kt0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0sTYCSGhbglfrCmFMDKr3iXTWtNOxUzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566732904537-c4uore0bsckp0l8a3jr22pgi8no6kt0i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

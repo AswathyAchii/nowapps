@@ -35,4 +35,13 @@ class ProductEvent with _$ProductEvent {
   const factory ProductEvent.productPrice({
     required int productPrice,
   }) = _ProductPrice;
+  const factory ProductEvent.getOpinion1({
+    required String opinion1,
+    required String opinion,
+  }) = _GetOpinion1;
+  const factory ProductEvent.getOpinion2({required String opinion2}) =
+      _GetOpinion2;
+  const factory ProductEvent.getOpinion3({required String opinion3}) =
+      _GetOpinion3;
+  const factory ProductEvent.deleteAllCartProducts() = _DeleteAllCartProducts;
 }

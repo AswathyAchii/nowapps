@@ -32,6 +32,10 @@ mixin _$ProductEvent {
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -49,6 +53,10 @@ mixin _$ProductEvent {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,6 +74,10 @@ mixin _$ProductEvent {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -83,6 +95,11 @@ mixin _$ProductEvent {
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,6 +116,10 @@ mixin _$ProductEvent {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -115,6 +136,10 @@ mixin _$ProductEvent {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -189,6 +214,10 @@ class _$_Started implements _Started {
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
   }) {
     return started();
   }
@@ -209,6 +238,10 @@ class _$_Started implements _Started {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
   }) {
     return started?.call();
   }
@@ -229,6 +262,10 @@ class _$_Started implements _Started {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -252,6 +289,11 @@ class _$_Started implements _Started {
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
   }) {
     return started(this);
   }
@@ -271,6 +313,10 @@ class _$_Started implements _Started {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
   }) {
     return started?.call(this);
   }
@@ -290,6 +336,10 @@ class _$_Started implements _Started {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -383,6 +433,10 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
   }) {
     return productPageOrNot(productOrNot);
   }
@@ -403,6 +457,10 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
   }) {
     return productPageOrNot?.call(productOrNot);
   }
@@ -423,6 +481,10 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (productPageOrNot != null) {
@@ -446,6 +508,11 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
   }) {
     return productPageOrNot(this);
   }
@@ -465,6 +532,10 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
   }) {
     return productPageOrNot?.call(this);
   }
@@ -484,6 +555,10 @@ class _$_ProductPageOrNot implements _ProductPageOrNot {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (productPageOrNot != null) {
@@ -582,6 +657,10 @@ class _$_GetProduct implements _GetProduct {
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
   }) {
     return getProduct(retailerId);
   }
@@ -602,6 +681,10 @@ class _$_GetProduct implements _GetProduct {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
   }) {
     return getProduct?.call(retailerId);
   }
@@ -622,6 +705,10 @@ class _$_GetProduct implements _GetProduct {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (getProduct != null) {
@@ -645,6 +732,11 @@ class _$_GetProduct implements _GetProduct {
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
   }) {
     return getProduct(this);
   }
@@ -664,6 +756,10 @@ class _$_GetProduct implements _GetProduct {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
   }) {
     return getProduct?.call(this);
   }
@@ -683,6 +779,10 @@ class _$_GetProduct implements _GetProduct {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (getProduct != null) {
@@ -831,6 +931,10 @@ class _$_AddProductToCart implements _AddProductToCart {
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
   }) {
     return addProductToCart(
         productId, retailerId, productName, this.productPrice, productImage);
@@ -852,6 +956,10 @@ class _$_AddProductToCart implements _AddProductToCart {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
   }) {
     return addProductToCart?.call(
         productId, retailerId, productName, this.productPrice, productImage);
@@ -873,6 +981,10 @@ class _$_AddProductToCart implements _AddProductToCart {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (addProductToCart != null) {
@@ -897,6 +1009,11 @@ class _$_AddProductToCart implements _AddProductToCart {
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
   }) {
     return addProductToCart(this);
   }
@@ -916,6 +1033,10 @@ class _$_AddProductToCart implements _AddProductToCart {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
   }) {
     return addProductToCart?.call(this);
   }
@@ -935,6 +1056,10 @@ class _$_AddProductToCart implements _AddProductToCart {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (addProductToCart != null) {
@@ -1068,6 +1193,10 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
   }) {
     return incrementCartItemQuantity(cartId, quantity, this.productPrice);
   }
@@ -1088,6 +1217,10 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
   }) {
     return incrementCartItemQuantity?.call(cartId, quantity, this.productPrice);
   }
@@ -1108,6 +1241,10 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (incrementCartItemQuantity != null) {
@@ -1131,6 +1268,11 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
   }) {
     return incrementCartItemQuantity(this);
   }
@@ -1150,6 +1292,10 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
   }) {
     return incrementCartItemQuantity?.call(this);
   }
@@ -1169,6 +1315,10 @@ class _$_IncrementCartItemQuantity implements _IncrementCartItemQuantity {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (incrementCartItemQuantity != null) {
@@ -1298,6 +1448,10 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
   }) {
     return decrementCartItemQuantity(cartId, quantity, this.productPrice);
   }
@@ -1318,6 +1472,10 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
   }) {
     return decrementCartItemQuantity?.call(cartId, quantity, this.productPrice);
   }
@@ -1338,6 +1496,10 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (decrementCartItemQuantity != null) {
@@ -1361,6 +1523,11 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
   }) {
     return decrementCartItemQuantity(this);
   }
@@ -1380,6 +1547,10 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
   }) {
     return decrementCartItemQuantity?.call(this);
   }
@@ -1399,6 +1570,10 @@ class _$_DecrementCartItemQuantity implements _DecrementCartItemQuantity {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (decrementCartItemQuantity != null) {
@@ -1502,6 +1677,10 @@ class _$_GetCartProducts implements _GetCartProducts {
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
   }) {
     return getCartProducts(retailerId);
   }
@@ -1522,6 +1701,10 @@ class _$_GetCartProducts implements _GetCartProducts {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
   }) {
     return getCartProducts?.call(retailerId);
   }
@@ -1542,6 +1725,10 @@ class _$_GetCartProducts implements _GetCartProducts {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (getCartProducts != null) {
@@ -1565,6 +1752,11 @@ class _$_GetCartProducts implements _GetCartProducts {
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
   }) {
     return getCartProducts(this);
   }
@@ -1584,6 +1776,10 @@ class _$_GetCartProducts implements _GetCartProducts {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
   }) {
     return getCartProducts?.call(this);
   }
@@ -1603,6 +1799,10 @@ class _$_GetCartProducts implements _GetCartProducts {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (getCartProducts != null) {
@@ -1709,6 +1909,10 @@ class _$_ClearCartQuantityandDisplayAddButton
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
   }) {
     return clearCartQuantityandDisplayAddButton(cartQunatity);
   }
@@ -1729,6 +1933,10 @@ class _$_ClearCartQuantityandDisplayAddButton
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
   }) {
     return clearCartQuantityandDisplayAddButton?.call(cartQunatity);
   }
@@ -1749,6 +1957,10 @@ class _$_ClearCartQuantityandDisplayAddButton
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (clearCartQuantityandDisplayAddButton != null) {
@@ -1772,6 +1984,11 @@ class _$_ClearCartQuantityandDisplayAddButton
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
   }) {
     return clearCartQuantityandDisplayAddButton(this);
   }
@@ -1791,6 +2008,10 @@ class _$_ClearCartQuantityandDisplayAddButton
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
   }) {
     return clearCartQuantityandDisplayAddButton?.call(this);
   }
@@ -1810,6 +2031,10 @@ class _$_ClearCartQuantityandDisplayAddButton
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (clearCartQuantityandDisplayAddButton != null) {
@@ -1911,6 +2136,10 @@ class _$_ProductPrice implements _ProductPrice {
     required TResult Function(int cartQunatity)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
   }) {
     return productPrice(this.productPrice);
   }
@@ -1931,6 +2160,10 @@ class _$_ProductPrice implements _ProductPrice {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
   }) {
     return productPrice?.call(this.productPrice);
   }
@@ -1951,6 +2184,10 @@ class _$_ProductPrice implements _ProductPrice {
     TResult Function(String retailerId)? getCartProducts,
     TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
     TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (productPrice != null) {
@@ -1974,6 +2211,11 @@ class _$_ProductPrice implements _ProductPrice {
     required TResult Function(_ClearCartQuantityandDisplayAddButton value)
         clearCartQuantityandDisplayAddButton,
     required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
   }) {
     return productPrice(this);
   }
@@ -1993,6 +2235,10 @@ class _$_ProductPrice implements _ProductPrice {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
   }) {
     return productPrice?.call(this);
   }
@@ -2012,6 +2258,10 @@ class _$_ProductPrice implements _ProductPrice {
     TResult Function(_ClearCartQuantityandDisplayAddButton value)?
         clearCartQuantityandDisplayAddButton,
     TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
     required TResult orElse(),
   }) {
     if (productPrice != null) {
@@ -2029,6 +2279,883 @@ abstract class _ProductPrice implements ProductEvent {
   @JsonKey(ignore: true)
   _$$_ProductPriceCopyWith<_$_ProductPrice> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_GetOpinion1CopyWith<$Res> {
+  factory _$$_GetOpinion1CopyWith(
+          _$_GetOpinion1 value, $Res Function(_$_GetOpinion1) then) =
+      __$$_GetOpinion1CopyWithImpl<$Res>;
+  $Res call({String opinion1, String opinion});
+}
+
+/// @nodoc
+class __$$_GetOpinion1CopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res>
+    implements _$$_GetOpinion1CopyWith<$Res> {
+  __$$_GetOpinion1CopyWithImpl(
+      _$_GetOpinion1 _value, $Res Function(_$_GetOpinion1) _then)
+      : super(_value, (v) => _then(v as _$_GetOpinion1));
+
+  @override
+  _$_GetOpinion1 get _value => super._value as _$_GetOpinion1;
+
+  @override
+  $Res call({
+    Object? opinion1 = freezed,
+    Object? opinion = freezed,
+  }) {
+    return _then(_$_GetOpinion1(
+      opinion1: opinion1 == freezed
+          ? _value.opinion1
+          : opinion1 // ignore: cast_nullable_to_non_nullable
+              as String,
+      opinion: opinion == freezed
+          ? _value.opinion
+          : opinion // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GetOpinion1 implements _GetOpinion1 {
+  const _$_GetOpinion1({required this.opinion1, required this.opinion});
+
+  @override
+  final String opinion1;
+  @override
+  final String opinion;
+
+  @override
+  String toString() {
+    return 'ProductEvent.getOpinion1(opinion1: $opinion1, opinion: $opinion)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetOpinion1 &&
+            const DeepCollectionEquality().equals(other.opinion1, opinion1) &&
+            const DeepCollectionEquality().equals(other.opinion, opinion));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(opinion1),
+      const DeepCollectionEquality().hash(opinion));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_GetOpinion1CopyWith<_$_GetOpinion1> get copyWith =>
+      __$$_GetOpinion1CopyWithImpl<_$_GetOpinion1>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool productOrNot) productPageOrNot,
+    required TResult Function(String retailerId) getProduct,
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
+        addProductToCart,
+    required TResult Function(int cartId, int quantity, int productPrice)
+        incrementCartItemQuantity,
+    required TResult Function(int cartId, int quantity, int productPrice)
+        decrementCartItemQuantity,
+    required TResult Function(String retailerId) getCartProducts,
+    required TResult Function(int cartQunatity)
+        clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
+  }) {
+    return getOpinion1(opinion1, opinion);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool productOrNot)? productPageOrNot,
+    TResult Function(String retailerId)? getProduct,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
+    TResult Function(String retailerId)? getCartProducts,
+    TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
+  }) {
+    return getOpinion1?.call(opinion1, opinion);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool productOrNot)? productPageOrNot,
+    TResult Function(String retailerId)? getProduct,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
+    TResult Function(String retailerId)? getCartProducts,
+    TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
+    required TResult orElse(),
+  }) {
+    if (getOpinion1 != null) {
+      return getOpinion1(opinion1, opinion);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_ProductPageOrNot value) productPageOrNot,
+    required TResult Function(_GetProduct value) getProduct,
+    required TResult Function(_AddProductToCart value) addProductToCart,
+    required TResult Function(_IncrementCartItemQuantity value)
+        incrementCartItemQuantity,
+    required TResult Function(_DecrementCartItemQuantity value)
+        decrementCartItemQuantity,
+    required TResult Function(_GetCartProducts value) getCartProducts,
+    required TResult Function(_ClearCartQuantityandDisplayAddButton value)
+        clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
+  }) {
+    return getOpinion1(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ProductPageOrNot value)? productPageOrNot,
+    TResult Function(_GetProduct value)? getProduct,
+    TResult Function(_AddProductToCart value)? addProductToCart,
+    TResult Function(_IncrementCartItemQuantity value)?
+        incrementCartItemQuantity,
+    TResult Function(_DecrementCartItemQuantity value)?
+        decrementCartItemQuantity,
+    TResult Function(_GetCartProducts value)? getCartProducts,
+    TResult Function(_ClearCartQuantityandDisplayAddButton value)?
+        clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
+  }) {
+    return getOpinion1?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ProductPageOrNot value)? productPageOrNot,
+    TResult Function(_GetProduct value)? getProduct,
+    TResult Function(_AddProductToCart value)? addProductToCart,
+    TResult Function(_IncrementCartItemQuantity value)?
+        incrementCartItemQuantity,
+    TResult Function(_DecrementCartItemQuantity value)?
+        decrementCartItemQuantity,
+    TResult Function(_GetCartProducts value)? getCartProducts,
+    TResult Function(_ClearCartQuantityandDisplayAddButton value)?
+        clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
+    required TResult orElse(),
+  }) {
+    if (getOpinion1 != null) {
+      return getOpinion1(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetOpinion1 implements ProductEvent {
+  const factory _GetOpinion1(
+      {required final String opinion1,
+      required final String opinion}) = _$_GetOpinion1;
+
+  String get opinion1;
+  String get opinion;
+  @JsonKey(ignore: true)
+  _$$_GetOpinion1CopyWith<_$_GetOpinion1> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_GetOpinion2CopyWith<$Res> {
+  factory _$$_GetOpinion2CopyWith(
+          _$_GetOpinion2 value, $Res Function(_$_GetOpinion2) then) =
+      __$$_GetOpinion2CopyWithImpl<$Res>;
+  $Res call({String opinion2});
+}
+
+/// @nodoc
+class __$$_GetOpinion2CopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res>
+    implements _$$_GetOpinion2CopyWith<$Res> {
+  __$$_GetOpinion2CopyWithImpl(
+      _$_GetOpinion2 _value, $Res Function(_$_GetOpinion2) _then)
+      : super(_value, (v) => _then(v as _$_GetOpinion2));
+
+  @override
+  _$_GetOpinion2 get _value => super._value as _$_GetOpinion2;
+
+  @override
+  $Res call({
+    Object? opinion2 = freezed,
+  }) {
+    return _then(_$_GetOpinion2(
+      opinion2: opinion2 == freezed
+          ? _value.opinion2
+          : opinion2 // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GetOpinion2 implements _GetOpinion2 {
+  const _$_GetOpinion2({required this.opinion2});
+
+  @override
+  final String opinion2;
+
+  @override
+  String toString() {
+    return 'ProductEvent.getOpinion2(opinion2: $opinion2)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetOpinion2 &&
+            const DeepCollectionEquality().equals(other.opinion2, opinion2));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(opinion2));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_GetOpinion2CopyWith<_$_GetOpinion2> get copyWith =>
+      __$$_GetOpinion2CopyWithImpl<_$_GetOpinion2>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool productOrNot) productPageOrNot,
+    required TResult Function(String retailerId) getProduct,
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
+        addProductToCart,
+    required TResult Function(int cartId, int quantity, int productPrice)
+        incrementCartItemQuantity,
+    required TResult Function(int cartId, int quantity, int productPrice)
+        decrementCartItemQuantity,
+    required TResult Function(String retailerId) getCartProducts,
+    required TResult Function(int cartQunatity)
+        clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
+  }) {
+    return getOpinion2(opinion2);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool productOrNot)? productPageOrNot,
+    TResult Function(String retailerId)? getProduct,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
+    TResult Function(String retailerId)? getCartProducts,
+    TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
+  }) {
+    return getOpinion2?.call(opinion2);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool productOrNot)? productPageOrNot,
+    TResult Function(String retailerId)? getProduct,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
+    TResult Function(String retailerId)? getCartProducts,
+    TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
+    required TResult orElse(),
+  }) {
+    if (getOpinion2 != null) {
+      return getOpinion2(opinion2);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_ProductPageOrNot value) productPageOrNot,
+    required TResult Function(_GetProduct value) getProduct,
+    required TResult Function(_AddProductToCart value) addProductToCart,
+    required TResult Function(_IncrementCartItemQuantity value)
+        incrementCartItemQuantity,
+    required TResult Function(_DecrementCartItemQuantity value)
+        decrementCartItemQuantity,
+    required TResult Function(_GetCartProducts value) getCartProducts,
+    required TResult Function(_ClearCartQuantityandDisplayAddButton value)
+        clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
+  }) {
+    return getOpinion2(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ProductPageOrNot value)? productPageOrNot,
+    TResult Function(_GetProduct value)? getProduct,
+    TResult Function(_AddProductToCart value)? addProductToCart,
+    TResult Function(_IncrementCartItemQuantity value)?
+        incrementCartItemQuantity,
+    TResult Function(_DecrementCartItemQuantity value)?
+        decrementCartItemQuantity,
+    TResult Function(_GetCartProducts value)? getCartProducts,
+    TResult Function(_ClearCartQuantityandDisplayAddButton value)?
+        clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
+  }) {
+    return getOpinion2?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ProductPageOrNot value)? productPageOrNot,
+    TResult Function(_GetProduct value)? getProduct,
+    TResult Function(_AddProductToCart value)? addProductToCart,
+    TResult Function(_IncrementCartItemQuantity value)?
+        incrementCartItemQuantity,
+    TResult Function(_DecrementCartItemQuantity value)?
+        decrementCartItemQuantity,
+    TResult Function(_GetCartProducts value)? getCartProducts,
+    TResult Function(_ClearCartQuantityandDisplayAddButton value)?
+        clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
+    required TResult orElse(),
+  }) {
+    if (getOpinion2 != null) {
+      return getOpinion2(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetOpinion2 implements ProductEvent {
+  const factory _GetOpinion2({required final String opinion2}) = _$_GetOpinion2;
+
+  String get opinion2;
+  @JsonKey(ignore: true)
+  _$$_GetOpinion2CopyWith<_$_GetOpinion2> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_GetOpinion3CopyWith<$Res> {
+  factory _$$_GetOpinion3CopyWith(
+          _$_GetOpinion3 value, $Res Function(_$_GetOpinion3) then) =
+      __$$_GetOpinion3CopyWithImpl<$Res>;
+  $Res call({String opinion3});
+}
+
+/// @nodoc
+class __$$_GetOpinion3CopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res>
+    implements _$$_GetOpinion3CopyWith<$Res> {
+  __$$_GetOpinion3CopyWithImpl(
+      _$_GetOpinion3 _value, $Res Function(_$_GetOpinion3) _then)
+      : super(_value, (v) => _then(v as _$_GetOpinion3));
+
+  @override
+  _$_GetOpinion3 get _value => super._value as _$_GetOpinion3;
+
+  @override
+  $Res call({
+    Object? opinion3 = freezed,
+  }) {
+    return _then(_$_GetOpinion3(
+      opinion3: opinion3 == freezed
+          ? _value.opinion3
+          : opinion3 // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_GetOpinion3 implements _GetOpinion3 {
+  const _$_GetOpinion3({required this.opinion3});
+
+  @override
+  final String opinion3;
+
+  @override
+  String toString() {
+    return 'ProductEvent.getOpinion3(opinion3: $opinion3)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetOpinion3 &&
+            const DeepCollectionEquality().equals(other.opinion3, opinion3));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(opinion3));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_GetOpinion3CopyWith<_$_GetOpinion3> get copyWith =>
+      __$$_GetOpinion3CopyWithImpl<_$_GetOpinion3>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool productOrNot) productPageOrNot,
+    required TResult Function(String retailerId) getProduct,
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
+        addProductToCart,
+    required TResult Function(int cartId, int quantity, int productPrice)
+        incrementCartItemQuantity,
+    required TResult Function(int cartId, int quantity, int productPrice)
+        decrementCartItemQuantity,
+    required TResult Function(String retailerId) getCartProducts,
+    required TResult Function(int cartQunatity)
+        clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
+  }) {
+    return getOpinion3(opinion3);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool productOrNot)? productPageOrNot,
+    TResult Function(String retailerId)? getProduct,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
+    TResult Function(String retailerId)? getCartProducts,
+    TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
+  }) {
+    return getOpinion3?.call(opinion3);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool productOrNot)? productPageOrNot,
+    TResult Function(String retailerId)? getProduct,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
+    TResult Function(String retailerId)? getCartProducts,
+    TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
+    required TResult orElse(),
+  }) {
+    if (getOpinion3 != null) {
+      return getOpinion3(opinion3);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_ProductPageOrNot value) productPageOrNot,
+    required TResult Function(_GetProduct value) getProduct,
+    required TResult Function(_AddProductToCart value) addProductToCart,
+    required TResult Function(_IncrementCartItemQuantity value)
+        incrementCartItemQuantity,
+    required TResult Function(_DecrementCartItemQuantity value)
+        decrementCartItemQuantity,
+    required TResult Function(_GetCartProducts value) getCartProducts,
+    required TResult Function(_ClearCartQuantityandDisplayAddButton value)
+        clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
+  }) {
+    return getOpinion3(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ProductPageOrNot value)? productPageOrNot,
+    TResult Function(_GetProduct value)? getProduct,
+    TResult Function(_AddProductToCart value)? addProductToCart,
+    TResult Function(_IncrementCartItemQuantity value)?
+        incrementCartItemQuantity,
+    TResult Function(_DecrementCartItemQuantity value)?
+        decrementCartItemQuantity,
+    TResult Function(_GetCartProducts value)? getCartProducts,
+    TResult Function(_ClearCartQuantityandDisplayAddButton value)?
+        clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
+  }) {
+    return getOpinion3?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ProductPageOrNot value)? productPageOrNot,
+    TResult Function(_GetProduct value)? getProduct,
+    TResult Function(_AddProductToCart value)? addProductToCart,
+    TResult Function(_IncrementCartItemQuantity value)?
+        incrementCartItemQuantity,
+    TResult Function(_DecrementCartItemQuantity value)?
+        decrementCartItemQuantity,
+    TResult Function(_GetCartProducts value)? getCartProducts,
+    TResult Function(_ClearCartQuantityandDisplayAddButton value)?
+        clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
+    required TResult orElse(),
+  }) {
+    if (getOpinion3 != null) {
+      return getOpinion3(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetOpinion3 implements ProductEvent {
+  const factory _GetOpinion3({required final String opinion3}) = _$_GetOpinion3;
+
+  String get opinion3;
+  @JsonKey(ignore: true)
+  _$$_GetOpinion3CopyWith<_$_GetOpinion3> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_DeleteAllCartProductsCopyWith<$Res> {
+  factory _$$_DeleteAllCartProductsCopyWith(_$_DeleteAllCartProducts value,
+          $Res Function(_$_DeleteAllCartProducts) then) =
+      __$$_DeleteAllCartProductsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_DeleteAllCartProductsCopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res>
+    implements _$$_DeleteAllCartProductsCopyWith<$Res> {
+  __$$_DeleteAllCartProductsCopyWithImpl(_$_DeleteAllCartProducts _value,
+      $Res Function(_$_DeleteAllCartProducts) _then)
+      : super(_value, (v) => _then(v as _$_DeleteAllCartProducts));
+
+  @override
+  _$_DeleteAllCartProducts get _value =>
+      super._value as _$_DeleteAllCartProducts;
+}
+
+/// @nodoc
+
+class _$_DeleteAllCartProducts implements _DeleteAllCartProducts {
+  const _$_DeleteAllCartProducts();
+
+  @override
+  String toString() {
+    return 'ProductEvent.deleteAllCartProducts()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_DeleteAllCartProducts);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool productOrNot) productPageOrNot,
+    required TResult Function(String retailerId) getProduct,
+    required TResult Function(String productId, String retailerId,
+            String productName, String productPrice, String productImage)
+        addProductToCart,
+    required TResult Function(int cartId, int quantity, int productPrice)
+        incrementCartItemQuantity,
+    required TResult Function(int cartId, int quantity, int productPrice)
+        decrementCartItemQuantity,
+    required TResult Function(String retailerId) getCartProducts,
+    required TResult Function(int cartQunatity)
+        clearCartQuantityandDisplayAddButton,
+    required TResult Function(int productPrice) productPrice,
+    required TResult Function(String opinion1, String opinion) getOpinion1,
+    required TResult Function(String opinion2) getOpinion2,
+    required TResult Function(String opinion3) getOpinion3,
+    required TResult Function() deleteAllCartProducts,
+  }) {
+    return deleteAllCartProducts();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool productOrNot)? productPageOrNot,
+    TResult Function(String retailerId)? getProduct,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
+    TResult Function(String retailerId)? getCartProducts,
+    TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
+  }) {
+    return deleteAllCartProducts?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool productOrNot)? productPageOrNot,
+    TResult Function(String retailerId)? getProduct,
+    TResult Function(String productId, String retailerId, String productName,
+            String productPrice, String productImage)?
+        addProductToCart,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        incrementCartItemQuantity,
+    TResult Function(int cartId, int quantity, int productPrice)?
+        decrementCartItemQuantity,
+    TResult Function(String retailerId)? getCartProducts,
+    TResult Function(int cartQunatity)? clearCartQuantityandDisplayAddButton,
+    TResult Function(int productPrice)? productPrice,
+    TResult Function(String opinion1, String opinion)? getOpinion1,
+    TResult Function(String opinion2)? getOpinion2,
+    TResult Function(String opinion3)? getOpinion3,
+    TResult Function()? deleteAllCartProducts,
+    required TResult orElse(),
+  }) {
+    if (deleteAllCartProducts != null) {
+      return deleteAllCartProducts();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_ProductPageOrNot value) productPageOrNot,
+    required TResult Function(_GetProduct value) getProduct,
+    required TResult Function(_AddProductToCart value) addProductToCart,
+    required TResult Function(_IncrementCartItemQuantity value)
+        incrementCartItemQuantity,
+    required TResult Function(_DecrementCartItemQuantity value)
+        decrementCartItemQuantity,
+    required TResult Function(_GetCartProducts value) getCartProducts,
+    required TResult Function(_ClearCartQuantityandDisplayAddButton value)
+        clearCartQuantityandDisplayAddButton,
+    required TResult Function(_ProductPrice value) productPrice,
+    required TResult Function(_GetOpinion1 value) getOpinion1,
+    required TResult Function(_GetOpinion2 value) getOpinion2,
+    required TResult Function(_GetOpinion3 value) getOpinion3,
+    required TResult Function(_DeleteAllCartProducts value)
+        deleteAllCartProducts,
+  }) {
+    return deleteAllCartProducts(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ProductPageOrNot value)? productPageOrNot,
+    TResult Function(_GetProduct value)? getProduct,
+    TResult Function(_AddProductToCart value)? addProductToCart,
+    TResult Function(_IncrementCartItemQuantity value)?
+        incrementCartItemQuantity,
+    TResult Function(_DecrementCartItemQuantity value)?
+        decrementCartItemQuantity,
+    TResult Function(_GetCartProducts value)? getCartProducts,
+    TResult Function(_ClearCartQuantityandDisplayAddButton value)?
+        clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
+  }) {
+    return deleteAllCartProducts?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ProductPageOrNot value)? productPageOrNot,
+    TResult Function(_GetProduct value)? getProduct,
+    TResult Function(_AddProductToCart value)? addProductToCart,
+    TResult Function(_IncrementCartItemQuantity value)?
+        incrementCartItemQuantity,
+    TResult Function(_DecrementCartItemQuantity value)?
+        decrementCartItemQuantity,
+    TResult Function(_GetCartProducts value)? getCartProducts,
+    TResult Function(_ClearCartQuantityandDisplayAddButton value)?
+        clearCartQuantityandDisplayAddButton,
+    TResult Function(_ProductPrice value)? productPrice,
+    TResult Function(_GetOpinion1 value)? getOpinion1,
+    TResult Function(_GetOpinion2 value)? getOpinion2,
+    TResult Function(_GetOpinion3 value)? getOpinion3,
+    TResult Function(_DeleteAllCartProducts value)? deleteAllCartProducts,
+    required TResult orElse(),
+  }) {
+    if (deleteAllCartProducts != null) {
+      return deleteAllCartProducts(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteAllCartProducts implements ProductEvent {
+  const factory _DeleteAllCartProducts() = _$_DeleteAllCartProducts;
 }
 
 /// @nodoc
@@ -2050,6 +3177,14 @@ mixin _$ProductState {
   bool get displayCartButton => throw _privateConstructorUsedError;
   int get cartItemItemQuantity => throw _privateConstructorUsedError;
   int get totalProductPrice => throw _privateConstructorUsedError;
+  TextEditingController get opinionController =>
+      throw _privateConstructorUsedError;
+  ScrollController get scrollOne => throw _privateConstructorUsedError;
+  ScrollController get scrollTwo => throw _privateConstructorUsedError;
+  String get opinion1 => throw _privateConstructorUsedError;
+  String get opinion2 => throw _privateConstructorUsedError;
+  String get opinion3 => throw _privateConstructorUsedError;
+  String get opinion => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ProductStateCopyWith<ProductState> get copyWith =>
@@ -2077,7 +3212,14 @@ abstract class $ProductStateCopyWith<$Res> {
       String apiResponse,
       bool displayCartButton,
       int cartItemItemQuantity,
-      int totalProductPrice});
+      int totalProductPrice,
+      TextEditingController opinionController,
+      ScrollController scrollOne,
+      ScrollController scrollTwo,
+      String opinion1,
+      String opinion2,
+      String opinion3,
+      String opinion});
 }
 
 /// @nodoc
@@ -2104,6 +3246,13 @@ class _$ProductStateCopyWithImpl<$Res> implements $ProductStateCopyWith<$Res> {
     Object? displayCartButton = freezed,
     Object? cartItemItemQuantity = freezed,
     Object? totalProductPrice = freezed,
+    Object? opinionController = freezed,
+    Object? scrollOne = freezed,
+    Object? scrollTwo = freezed,
+    Object? opinion1 = freezed,
+    Object? opinion2 = freezed,
+    Object? opinion3 = freezed,
+    Object? opinion = freezed,
   }) {
     return _then(_value.copyWith(
       productsOrNot: productsOrNot == freezed
@@ -2162,6 +3311,34 @@ class _$ProductStateCopyWithImpl<$Res> implements $ProductStateCopyWith<$Res> {
           ? _value.totalProductPrice
           : totalProductPrice // ignore: cast_nullable_to_non_nullable
               as int,
+      opinionController: opinionController == freezed
+          ? _value.opinionController
+          : opinionController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      scrollOne: scrollOne == freezed
+          ? _value.scrollOne
+          : scrollOne // ignore: cast_nullable_to_non_nullable
+              as ScrollController,
+      scrollTwo: scrollTwo == freezed
+          ? _value.scrollTwo
+          : scrollTwo // ignore: cast_nullable_to_non_nullable
+              as ScrollController,
+      opinion1: opinion1 == freezed
+          ? _value.opinion1
+          : opinion1 // ignore: cast_nullable_to_non_nullable
+              as String,
+      opinion2: opinion2 == freezed
+          ? _value.opinion2
+          : opinion2 // ignore: cast_nullable_to_non_nullable
+              as String,
+      opinion3: opinion3 == freezed
+          ? _value.opinion3
+          : opinion3 // ignore: cast_nullable_to_non_nullable
+              as String,
+      opinion: opinion == freezed
+          ? _value.opinion
+          : opinion // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2189,7 +3366,14 @@ abstract class _$$_ProductStateCopyWith<$Res>
       String apiResponse,
       bool displayCartButton,
       int cartItemItemQuantity,
-      int totalProductPrice});
+      int totalProductPrice,
+      TextEditingController opinionController,
+      ScrollController scrollOne,
+      ScrollController scrollTwo,
+      String opinion1,
+      String opinion2,
+      String opinion3,
+      String opinion});
 }
 
 /// @nodoc
@@ -2219,6 +3403,13 @@ class __$$_ProductStateCopyWithImpl<$Res>
     Object? displayCartButton = freezed,
     Object? cartItemItemQuantity = freezed,
     Object? totalProductPrice = freezed,
+    Object? opinionController = freezed,
+    Object? scrollOne = freezed,
+    Object? scrollTwo = freezed,
+    Object? opinion1 = freezed,
+    Object? opinion2 = freezed,
+    Object? opinion3 = freezed,
+    Object? opinion = freezed,
   }) {
     return _then(_$_ProductState(
       productsOrNot: productsOrNot == freezed
@@ -2277,6 +3468,34 @@ class __$$_ProductStateCopyWithImpl<$Res>
           ? _value.totalProductPrice
           : totalProductPrice // ignore: cast_nullable_to_non_nullable
               as int,
+      opinionController: opinionController == freezed
+          ? _value.opinionController
+          : opinionController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      scrollOne: scrollOne == freezed
+          ? _value.scrollOne
+          : scrollOne // ignore: cast_nullable_to_non_nullable
+              as ScrollController,
+      scrollTwo: scrollTwo == freezed
+          ? _value.scrollTwo
+          : scrollTwo // ignore: cast_nullable_to_non_nullable
+              as ScrollController,
+      opinion1: opinion1 == freezed
+          ? _value.opinion1
+          : opinion1 // ignore: cast_nullable_to_non_nullable
+              as String,
+      opinion2: opinion2 == freezed
+          ? _value.opinion2
+          : opinion2 // ignore: cast_nullable_to_non_nullable
+              as String,
+      opinion3: opinion3 == freezed
+          ? _value.opinion3
+          : opinion3 // ignore: cast_nullable_to_non_nullable
+              as String,
+      opinion: opinion == freezed
+          ? _value.opinion
+          : opinion // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2298,7 +3517,14 @@ class _$_ProductState implements _ProductState {
       required this.apiResponse,
       required this.displayCartButton,
       required this.cartItemItemQuantity,
-      required this.totalProductPrice})
+      required this.totalProductPrice,
+      required this.opinionController,
+      required this.scrollOne,
+      required this.scrollTwo,
+      required this.opinion1,
+      required this.opinion2,
+      required this.opinion3,
+      required this.opinion})
       : _productDataModel = productDataModel,
         _cartDataModel = cartDataModel;
 
@@ -2346,10 +3572,24 @@ class _$_ProductState implements _ProductState {
   final int cartItemItemQuantity;
   @override
   final int totalProductPrice;
+  @override
+  final TextEditingController opinionController;
+  @override
+  final ScrollController scrollOne;
+  @override
+  final ScrollController scrollTwo;
+  @override
+  final String opinion1;
+  @override
+  final String opinion2;
+  @override
+  final String opinion3;
+  @override
+  final String opinion;
 
   @override
   String toString() {
-    return 'ProductState(productsOrNot: $productsOrNot, isCartLoading: $isCartLoading, isProductLoading: $isProductLoading, productFailureOrSuccessOption: $productFailureOrSuccessOption, cartFailureOrSuccessOption: $cartFailureOrSuccessOption, productDataModel: $productDataModel, cartDataModel: $cartDataModel, retailerID: $retailerID, cartId: $cartId, orederId: $orederId, apiResponse: $apiResponse, displayCartButton: $displayCartButton, cartItemItemQuantity: $cartItemItemQuantity, totalProductPrice: $totalProductPrice)';
+    return 'ProductState(productsOrNot: $productsOrNot, isCartLoading: $isCartLoading, isProductLoading: $isProductLoading, productFailureOrSuccessOption: $productFailureOrSuccessOption, cartFailureOrSuccessOption: $cartFailureOrSuccessOption, productDataModel: $productDataModel, cartDataModel: $cartDataModel, retailerID: $retailerID, cartId: $cartId, orederId: $orederId, apiResponse: $apiResponse, displayCartButton: $displayCartButton, cartItemItemQuantity: $cartItemItemQuantity, totalProductPrice: $totalProductPrice, opinionController: $opinionController, scrollOne: $scrollOne, scrollTwo: $scrollTwo, opinion1: $opinion1, opinion2: $opinion2, opinion3: $opinion3, opinion: $opinion)';
   }
 
   @override
@@ -2383,26 +3623,42 @@ class _$_ProductState implements _ProductState {
             const DeepCollectionEquality()
                 .equals(other.cartItemItemQuantity, cartItemItemQuantity) &&
             const DeepCollectionEquality()
-                .equals(other.totalProductPrice, totalProductPrice));
+                .equals(other.totalProductPrice, totalProductPrice) &&
+            const DeepCollectionEquality()
+                .equals(other.opinionController, opinionController) &&
+            const DeepCollectionEquality().equals(other.scrollOne, scrollOne) &&
+            const DeepCollectionEquality().equals(other.scrollTwo, scrollTwo) &&
+            const DeepCollectionEquality().equals(other.opinion1, opinion1) &&
+            const DeepCollectionEquality().equals(other.opinion2, opinion2) &&
+            const DeepCollectionEquality().equals(other.opinion3, opinion3) &&
+            const DeepCollectionEquality().equals(other.opinion, opinion));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(productsOrNot),
-      const DeepCollectionEquality().hash(isCartLoading),
-      const DeepCollectionEquality().hash(isProductLoading),
-      const DeepCollectionEquality().hash(productFailureOrSuccessOption),
-      const DeepCollectionEquality().hash(cartFailureOrSuccessOption),
-      const DeepCollectionEquality().hash(_productDataModel),
-      const DeepCollectionEquality().hash(_cartDataModel),
-      const DeepCollectionEquality().hash(retailerID),
-      const DeepCollectionEquality().hash(cartId),
-      const DeepCollectionEquality().hash(orederId),
-      const DeepCollectionEquality().hash(apiResponse),
-      const DeepCollectionEquality().hash(displayCartButton),
-      const DeepCollectionEquality().hash(cartItemItemQuantity),
-      const DeepCollectionEquality().hash(totalProductPrice));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(productsOrNot),
+        const DeepCollectionEquality().hash(isCartLoading),
+        const DeepCollectionEquality().hash(isProductLoading),
+        const DeepCollectionEquality().hash(productFailureOrSuccessOption),
+        const DeepCollectionEquality().hash(cartFailureOrSuccessOption),
+        const DeepCollectionEquality().hash(_productDataModel),
+        const DeepCollectionEquality().hash(_cartDataModel),
+        const DeepCollectionEquality().hash(retailerID),
+        const DeepCollectionEquality().hash(cartId),
+        const DeepCollectionEquality().hash(orederId),
+        const DeepCollectionEquality().hash(apiResponse),
+        const DeepCollectionEquality().hash(displayCartButton),
+        const DeepCollectionEquality().hash(cartItemItemQuantity),
+        const DeepCollectionEquality().hash(totalProductPrice),
+        const DeepCollectionEquality().hash(opinionController),
+        const DeepCollectionEquality().hash(scrollOne),
+        const DeepCollectionEquality().hash(scrollTwo),
+        const DeepCollectionEquality().hash(opinion1),
+        const DeepCollectionEquality().hash(opinion2),
+        const DeepCollectionEquality().hash(opinion3),
+        const DeepCollectionEquality().hash(opinion)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -2427,7 +3683,14 @@ abstract class _ProductState implements ProductState {
       required final String apiResponse,
       required final bool displayCartButton,
       required final int cartItemItemQuantity,
-      required final int totalProductPrice}) = _$_ProductState;
+      required final int totalProductPrice,
+      required final TextEditingController opinionController,
+      required final ScrollController scrollOne,
+      required final ScrollController scrollTwo,
+      required final String opinion1,
+      required final String opinion2,
+      required final String opinion3,
+      required final String opinion}) = _$_ProductState;
 
   @override
   bool get productsOrNot;
@@ -2459,6 +3722,20 @@ abstract class _ProductState implements ProductState {
   int get cartItemItemQuantity;
   @override
   int get totalProductPrice;
+  @override
+  TextEditingController get opinionController;
+  @override
+  ScrollController get scrollOne;
+  @override
+  ScrollController get scrollTwo;
+  @override
+  String get opinion1;
+  @override
+  String get opinion2;
+  @override
+  String get opinion3;
+  @override
+  String get opinion;
   @override
   @JsonKey(ignore: true)
   _$$_ProductStateCopyWith<_$_ProductState> get copyWith =>

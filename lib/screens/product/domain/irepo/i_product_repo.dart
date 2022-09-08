@@ -25,6 +25,7 @@ abstract class IProductRepo {
   Future<Either<ProductFailures, String>> deleteProductFromCart({
     required String cartID,
   });
+
   Future<Either<ProductFailures, String>> updateQuantityOfProductInCart({
     required int cartID,
     required int quantity,
@@ -32,4 +33,5 @@ abstract class IProductRepo {
   });
   Future<Either<ProductFailures, List<CartDataModel>>> getCartItems(
       {required String retailerId});
+  Future<Either<ProductFailures, String>> deleteAllProductsFromCart();
 }
