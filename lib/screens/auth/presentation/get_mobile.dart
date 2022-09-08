@@ -9,7 +9,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:now_apps/core/colors.dart';
 import 'package:now_apps/core/constants.dart';
 import 'package:now_apps/core/styles.dart';
+import 'package:now_apps/router/router.dart';
 import 'package:now_apps/screens/auth/application/authentication_bloc.dart';
+import 'package:now_apps/screens/auth/presentation/verify_mobile.dart';
 
 class GetMobileNumber extends StatelessWidget {
   const GetMobileNumber({Key? key}) : super(key: key);
@@ -19,17 +21,21 @@ class GetMobileNumber extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              backgroundImageTopRight(),
-              loginHeading(), //login Heading "Login"
-              loginSubHeading(), // login sub heading "please login to continue"
-              numberTextFormField(context), // collect mobile number
-              loginButton(context), //Login button
-              backgroundImageBottomLeft(),
-            ],
+          child: BlocBuilder<AuthenticationBloc, AuthenticationState>(
+            builder: (context, state) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  backgroundImageTopRight(),
+                  loginHeading(), //login Heading "Login"
+                  loginSubHeading(), // login sub heading "please login to continue"
+                  numberTextFormField(context), // collect mobile number
+                  loginButton(context, state), //Login button
+                  backgroundImageBottomLeft(),
+                ],
+              );
+            },
           ),
         ),
       ),
@@ -37,12 +43,24 @@ class GetMobileNumber extends StatelessWidget {
   }
 
 //--------Login button---------//
-  GestureDetector loginButton(BuildContext context) {
+  GestureDetector loginButton(BuildContext context, AuthenticationState state) {
     return GestureDetector(
       onTap: () {
         context
             .read<AuthenticationBloc>()
-            .add(const AuthenticationEvent.otpSendOrNot(otpSendOrNot: false));
+            .add(const AuthenticationEvent.verifyPhone());
+
+        Navigator.push(
+            context,
+            FadePageRoute(
+              widget: const VerifyOTP(),
+              alignment: Alignment.center,
+              curve: Curves.ease,
+            ));
+
+        // context
+        //     .read<AuthenticationBloc>()
+        //     .add(const AuthenticationEvent.otpSendOrNot(otpSendOrNot: false));
       },
       child: Padding(
         padding: const EdgeInsets.only(
@@ -102,6 +120,16 @@ class GetMobileNumber extends StatelessWidget {
                       AuthenticationEvent.getMobileNumber(
                           mobileNumber: state.mobileNumberController.text));
                 }),
+                validator: (val) {
+                  if (!RegExp(r'(^(?:[+0]9)?[0-9]{10,12}$)').hasMatch(val!)) {
+                    return 'Enter Valid Phone Number';
+                  } else {
+                    context.read<AuthenticationBloc>().add(
+                        const AuthenticationEvent.otpSendOrNot(
+                            otpSendOrNot: true));
+                    return null;
+                  }
+                },
                 autovalidateMode: AutovalidateMode.always,
                 decoration: InputDecoration(
                   hintText: "Enter your mobile number",

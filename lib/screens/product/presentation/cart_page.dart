@@ -3,13 +3,16 @@ Date: 06/09/2022
 Path: lib\screens\product\presentation\cart_page.dart
 Content: Page which displays products in cart
 */
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:now_apps/core/constants.dart';
+import 'package:now_apps/router/router.dart';
 import 'package:now_apps/screens/product/application/product_bloc.dart';
 import 'package:now_apps/screens/product/widget/divider/divider_dash.dart';
+import 'package:now_apps/screens/product/widget/ordered.dart';
 
 late int? productPRICE;
 
@@ -53,169 +56,224 @@ class CartPage extends StatelessWidget {
     );
   }
 
-  Column cart() {
-    return Column(
-      children: [
-        cartHeading(),
-        Expanded(
-          flex: 5,
-          child: BlocBuilder<ProductBloc, ProductState>(
-            builder: (context, state) {
-              return ListView.builder(
-                scrollDirection: Axis.vertical,
-                itemCount: state.cartDataModel!.length,
-                itemBuilder: (BuildContext context, int index) {
-                  productPRICE =
-                      int.parse(state.cartDataModel![index].productPrice);
+  Padding cart() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 8.0, right: 8),
+      child: Column(
+        children: [
+          cartHeading(),
+          Expanded(
+            flex: 6,
+            child: BlocBuilder<ProductBloc, ProductState>(
+              builder: (context, state) {
+                return ListView.builder(
+                  controller: state.scrollOne,
+                  scrollDirection: Axis.vertical,
+                  itemCount: state.cartDataModel!.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    productPRICE =
+                        int.parse(state.cartDataModel![index].productPrice);
 
-                  return GestureDetector(
-                    onTap: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                          left: 29.0, right: 29.0, bottom: 30.0),
-                      child: Container(
-                        height: 100,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: const Color.fromRGBO(209, 207, 207, 1),
-                            width: 1,
+                    return GestureDetector(
+                      onTap: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                            left: 29.0, right: 29.0, bottom: 30.0),
+                        child: Container(
+                          height: 100,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: const Color.fromRGBO(209, 207, 207, 1),
+                              width: 1,
+                            ),
                           ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Row(
-                            children: [
-                              Expanded(
-                                flex: 2,
-                                child: Container(
-                                  color: Colors.white,
-                                  child: Image.network(
-                                      state.cartDataModel![index].productImage),
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                    color: Colors.white,
+                                    child: Image.network(state
+                                        .cartDataModel![index].productImage),
+                                  ),
                                 ),
-                              ),
-                              kWidth10,
-                              Expanded(
-                                  flex: 2,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(top: 8.0),
-                                        child: Text(
-                                          state.cartDataModel![index]
-                                              .productName,
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: GoogleFonts.redHatDisplay(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w700,
+                                kWidth10,
+                                Expanded(
+                                    flex: 2,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 8.0),
+                                          child: Text(
+                                            state.cartDataModel![index]
+                                                .productName,
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: GoogleFonts.redHatDisplay(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w700,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      // Text(
-                                      //   state.productDataModel![index].prodMrp!,
-                                      //   maxLines: 1,
-                                      //   overflow: TextOverflow.ellipsis,
-                                      //   style: GoogleFonts.redHatDisplay(
-                                      //     fontSize: 9,
-                                      //     fontWeight: FontWeight.w400,
-                                      //   ),
-                                      // ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(top: 16.0),
-                                        child: addToCartButton(
-                                          context,
-                                          state.cartDataModel![index].cartId,
-                                          int.parse(state
-                                              .cartDataModel![index].quantity),
-                                          state.cartDataModel![index]
-                                              .productPrice,
+                                        // Text(
+                                        //   state.productDataModel![index].prodMrp!,
+                                        //   maxLines: 1,
+                                        //   overflow: TextOverflow.ellipsis,
+                                        //   style: GoogleFonts.redHatDisplay(
+                                        //     fontSize: 9,
+                                        //     fontWeight: FontWeight.w400,
+                                        //   ),
+                                        // ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 16.0),
+                                          child: addToCartButton(
+                                            context,
+                                            state.cartDataModel![index].cartId,
+                                            int.parse(state
+                                                .cartDataModel![index]
+                                                .quantity),
+                                            state.cartDataModel![index]
+                                                .productPrice,
+                                          ),
                                         ),
+                                      ],
+                                    )),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
+            ),
+          ),
+          kHeight25,
+          Expanded(
+            flex: 5,
+            child: BlocBuilder<ProductBloc, ProductState>(
+              builder: (context, state) {
+                return Padding(
+                  padding: const EdgeInsets.only(left: 10.0, right: 12),
+                  child: SizedBox(
+                    height: 100,
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: ListView.builder(
+                            controller: state.scrollTwo,
+                            scrollDirection: Axis.vertical,
+                            itemCount: state.cartDataModel!.length,
+                            itemBuilder: (context, index) {
+                              return Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 20.0,
+                                    right: 20.0,
+                                    bottom: 4.0,
+                                    top: 10),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    SizedBox(
+                                      width: 220,
+                                      child: Text(
+                                        state.cartDataModel![index].productName,
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
                                       ),
-                                    ],
-                                  )),
+                                    ),
+                                    Text(
+                                        "${int.parse(state.cartDataModel![index].productPrice) * int.parse(state.cartDataModel![index].quantity)}"),
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                        const MySeparator(),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            bottom: 10,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Total Price",
+                                style: GoogleFonts.redHatDisplay(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                              Text('${state.totalProductPrice}')
                             ],
                           ),
                         ),
-                      ),
+                        const MySeparator(),
+                        buyButton(context)
+                      ],
                     ),
-                  );
-                },
-              );
-            },
+                  ),
+                );
+              },
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Padding buyButton(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 30, bottom: 20, left: 260, right: 20),
+      child: GestureDetector(
+        onTap: () {
+          context
+              .read<ProductBloc>()
+              .add(const ProductEvent.deleteAllCartProducts());
+          Navigator.push(
+            context,
+            FadePageRoute(
+              widget: const OrderPlaced(),
+              alignment: Alignment.center,
+              curve: Curves.ease,
+            ),
+          );
+        },
+        child: Container(
+          alignment: Alignment.bottomRight,
+          decoration: const BoxDecoration(
+            color: Color(0xffF98803),
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
+            ),
+          ),
+          height: 50,
+          width: 115,
+          child: Center(
+            child: Text(
+              "Buy",
+              style: GoogleFonts.redHatDisplay(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white),
+            ),
           ),
         ),
-        kHeight25,
-        const MySeparator(),
-        Expanded(
-          flex: 2,
-          child: BlocBuilder<ProductBloc, ProductState>(
-            builder: (context, state) {
-              return SizedBox(
-                height: 100,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: ListView.builder(
-                        scrollDirection: Axis.vertical,
-                        itemCount: state.cartDataModel!.length,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.only(
-                                left: 20.0, right: 20.0, bottom: 4.0, top: 10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                SizedBox(
-                                  width: 300,
-                                  child: Text(
-                                    state.cartDataModel![index].productName,
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 1,
-                                  ),
-                                ),
-                                Text(
-                                    "${int.parse(state.cartDataModel![index].productPrice) * int.parse(state.cartDataModel![index].quantity)}"),
-                              ],
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                    const MySeparator(),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 20,
-                        right: 20,
-                        bottom: 10,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Total Price",
-                            style: GoogleFonts.redHatDisplay(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          Text('${state.totalProductPrice}')
-                        ],
-                      ),
-                    ),
-                    const MySeparator(),
-                  ],
-                ),
-              );
-            },
-          ),
-        )
-      ],
+      ),
     );
   }
 
@@ -315,8 +373,8 @@ class CartPage extends StatelessWidget {
     );
   }
 
-  Column cartEmpty() {
-    return Column(
+  ListView cartEmpty() {
+    return ListView(
       children: [
         // cartHeading(), // Cart Heading
         Padding(
@@ -327,20 +385,24 @@ class CartPage extends StatelessWidget {
             width: 255,
           ),
         ),
-        Text(
-          "Your cart is empty!",
-          style: GoogleFonts.redHatDisplay(
-              fontSize: 24,
-              fontWeight: FontWeight.w400,
-              color: const Color(0xffC0BEBE)),
+        Center(
+          child: Text(
+            "Your cart is empty!",
+            style: GoogleFonts.redHatDisplay(
+                fontSize: 24,
+                fontWeight: FontWeight.w400,
+                color: const Color(0xffC0BEBE)),
+          ),
         ),
-        Text(
-          "Looks like you haven’t added any\nproduct yet.",
-          textAlign: TextAlign.center,
-          style: GoogleFonts.redHatDisplay(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-              color: const Color(0xffC0BEBE)),
+        Center(
+          child: Text(
+            "Looks like you haven’t added any\nproduct yet.",
+            textAlign: TextAlign.center,
+            style: GoogleFonts.redHatDisplay(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                color: const Color(0xffC0BEBE)),
+          ),
         ),
       ],
     );

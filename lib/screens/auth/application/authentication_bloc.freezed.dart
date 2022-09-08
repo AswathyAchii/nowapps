@@ -21,6 +21,8 @@ mixin _$AuthenticationEvent {
     required TResult Function() started,
     required TResult Function(bool otpSendOrNot) otpSendOrNot,
     required TResult Function(String mobileNumber) getMobileNumber,
+    required TResult Function() verifyPhone,
+    required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
   }) =>
@@ -30,6 +32,8 @@ mixin _$AuthenticationEvent {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
   }) =>
@@ -39,6 +43,8 @@ mixin _$AuthenticationEvent {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
     required TResult orElse(),
@@ -49,6 +55,8 @@ mixin _$AuthenticationEvent {
     required TResult Function(_Started value) started,
     required TResult Function(_OtpSendOrNot value) otpSendOrNot,
     required TResult Function(_GetMobileNumber value) getMobileNumber,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
   }) =>
@@ -58,6 +66,8 @@ mixin _$AuthenticationEvent {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
   }) =>
@@ -67,6 +77,8 @@ mixin _$AuthenticationEvent {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
     required TResult orElse(),
@@ -134,6 +146,8 @@ class _$_Started implements _Started {
     required TResult Function() started,
     required TResult Function(bool otpSendOrNot) otpSendOrNot,
     required TResult Function(String mobileNumber) getMobileNumber,
+    required TResult Function() verifyPhone,
+    required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
   }) {
@@ -146,6 +160,8 @@ class _$_Started implements _Started {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
   }) {
@@ -158,6 +174,8 @@ class _$_Started implements _Started {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
     required TResult orElse(),
@@ -174,6 +192,8 @@ class _$_Started implements _Started {
     required TResult Function(_Started value) started,
     required TResult Function(_OtpSendOrNot value) otpSendOrNot,
     required TResult Function(_GetMobileNumber value) getMobileNumber,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
   }) {
@@ -186,6 +206,8 @@ class _$_Started implements _Started {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
   }) {
@@ -198,6 +220,8 @@ class _$_Started implements _Started {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
     required TResult orElse(),
@@ -282,6 +306,8 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     required TResult Function() started,
     required TResult Function(bool otpSendOrNot) otpSendOrNot,
     required TResult Function(String mobileNumber) getMobileNumber,
+    required TResult Function() verifyPhone,
+    required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
   }) {
@@ -294,6 +320,8 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
   }) {
@@ -306,6 +334,8 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
     required TResult orElse(),
@@ -322,6 +352,8 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     required TResult Function(_Started value) started,
     required TResult Function(_OtpSendOrNot value) otpSendOrNot,
     required TResult Function(_GetMobileNumber value) getMobileNumber,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
   }) {
@@ -334,6 +366,8 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
   }) {
@@ -346,6 +380,8 @@ class _$_OtpSendOrNot implements _OtpSendOrNot {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
     required TResult orElse(),
@@ -436,6 +472,8 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     required TResult Function() started,
     required TResult Function(bool otpSendOrNot) otpSendOrNot,
     required TResult Function(String mobileNumber) getMobileNumber,
+    required TResult Function() verifyPhone,
+    required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
   }) {
@@ -448,6 +486,8 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
   }) {
@@ -460,6 +500,8 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
     required TResult orElse(),
@@ -476,6 +518,8 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     required TResult Function(_Started value) started,
     required TResult Function(_OtpSendOrNot value) otpSendOrNot,
     required TResult Function(_GetMobileNumber value) getMobileNumber,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
   }) {
@@ -488,6 +532,8 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
   }) {
@@ -500,6 +546,8 @@ class _$_GetMobileNumber implements _GetMobileNumber {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
     required TResult orElse(),
@@ -519,6 +567,276 @@ abstract class _GetMobileNumber implements AuthenticationEvent {
   @JsonKey(ignore: true)
   _$$_GetMobileNumberCopyWith<_$_GetMobileNumber> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_VerifyPhoneCopyWith<$Res> {
+  factory _$$_VerifyPhoneCopyWith(
+          _$_VerifyPhone value, $Res Function(_$_VerifyPhone) then) =
+      __$$_VerifyPhoneCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_VerifyPhoneCopyWithImpl<$Res>
+    extends _$AuthenticationEventCopyWithImpl<$Res>
+    implements _$$_VerifyPhoneCopyWith<$Res> {
+  __$$_VerifyPhoneCopyWithImpl(
+      _$_VerifyPhone _value, $Res Function(_$_VerifyPhone) _then)
+      : super(_value, (v) => _then(v as _$_VerifyPhone));
+
+  @override
+  _$_VerifyPhone get _value => super._value as _$_VerifyPhone;
+}
+
+/// @nodoc
+
+class _$_VerifyPhone implements _VerifyPhone {
+  const _$_VerifyPhone();
+
+  @override
+  String toString() {
+    return 'AuthenticationEvent.verifyPhone()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_VerifyPhone);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool otpSendOrNot) otpSendOrNot,
+    required TResult Function(String mobileNumber) getMobileNumber,
+    required TResult Function() verifyPhone,
+    required TResult Function() verifyOtp,
+    required TResult Function(String otp) getOtp,
+    required TResult Function() resendOtp,
+  }) {
+    return verifyPhone();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool otpSendOrNot)? otpSendOrNot,
+    TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
+    TResult Function(String otp)? getOtp,
+    TResult Function()? resendOtp,
+  }) {
+    return verifyPhone?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool otpSendOrNot)? otpSendOrNot,
+    TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
+    TResult Function(String otp)? getOtp,
+    TResult Function()? resendOtp,
+    required TResult orElse(),
+  }) {
+    if (verifyPhone != null) {
+      return verifyPhone();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_OtpSendOrNot value) otpSendOrNot,
+    required TResult Function(_GetMobileNumber value) getMobileNumber,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_GetOtp value) getOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+  }) {
+    return verifyPhone(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OtpSendOrNot value)? otpSendOrNot,
+    TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_GetOtp value)? getOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+  }) {
+    return verifyPhone?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OtpSendOrNot value)? otpSendOrNot,
+    TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_GetOtp value)? getOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    required TResult orElse(),
+  }) {
+    if (verifyPhone != null) {
+      return verifyPhone(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _VerifyPhone implements AuthenticationEvent {
+  const factory _VerifyPhone() = _$_VerifyPhone;
+}
+
+/// @nodoc
+abstract class _$$_VerifyOtpCopyWith<$Res> {
+  factory _$$_VerifyOtpCopyWith(
+          _$_VerifyOtp value, $Res Function(_$_VerifyOtp) then) =
+      __$$_VerifyOtpCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_VerifyOtpCopyWithImpl<$Res>
+    extends _$AuthenticationEventCopyWithImpl<$Res>
+    implements _$$_VerifyOtpCopyWith<$Res> {
+  __$$_VerifyOtpCopyWithImpl(
+      _$_VerifyOtp _value, $Res Function(_$_VerifyOtp) _then)
+      : super(_value, (v) => _then(v as _$_VerifyOtp));
+
+  @override
+  _$_VerifyOtp get _value => super._value as _$_VerifyOtp;
+}
+
+/// @nodoc
+
+class _$_VerifyOtp implements _VerifyOtp {
+  const _$_VerifyOtp();
+
+  @override
+  String toString() {
+    return 'AuthenticationEvent.verifyOtp()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_VerifyOtp);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool otpSendOrNot) otpSendOrNot,
+    required TResult Function(String mobileNumber) getMobileNumber,
+    required TResult Function() verifyPhone,
+    required TResult Function() verifyOtp,
+    required TResult Function(String otp) getOtp,
+    required TResult Function() resendOtp,
+  }) {
+    return verifyOtp();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool otpSendOrNot)? otpSendOrNot,
+    TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
+    TResult Function(String otp)? getOtp,
+    TResult Function()? resendOtp,
+  }) {
+    return verifyOtp?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool otpSendOrNot)? otpSendOrNot,
+    TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
+    TResult Function(String otp)? getOtp,
+    TResult Function()? resendOtp,
+    required TResult orElse(),
+  }) {
+    if (verifyOtp != null) {
+      return verifyOtp();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_OtpSendOrNot value) otpSendOrNot,
+    required TResult Function(_GetMobileNumber value) getMobileNumber,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_VerifyOtp value) verifyOtp,
+    required TResult Function(_GetOtp value) getOtp,
+    required TResult Function(_ResendOtp value) resendOtp,
+  }) {
+    return verifyOtp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OtpSendOrNot value)? otpSendOrNot,
+    TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_GetOtp value)? getOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+  }) {
+    return verifyOtp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_OtpSendOrNot value)? otpSendOrNot,
+    TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
+    TResult Function(_GetOtp value)? getOtp,
+    TResult Function(_ResendOtp value)? resendOtp,
+    required TResult orElse(),
+  }) {
+    if (verifyOtp != null) {
+      return verifyOtp(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _VerifyOtp implements AuthenticationEvent {
+  const factory _VerifyOtp() = _$_VerifyOtp;
 }
 
 /// @nodoc
@@ -587,6 +905,8 @@ class _$_GetOtp implements _GetOtp {
     required TResult Function() started,
     required TResult Function(bool otpSendOrNot) otpSendOrNot,
     required TResult Function(String mobileNumber) getMobileNumber,
+    required TResult Function() verifyPhone,
+    required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
   }) {
@@ -599,6 +919,8 @@ class _$_GetOtp implements _GetOtp {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
   }) {
@@ -611,6 +933,8 @@ class _$_GetOtp implements _GetOtp {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
     required TResult orElse(),
@@ -627,6 +951,8 @@ class _$_GetOtp implements _GetOtp {
     required TResult Function(_Started value) started,
     required TResult Function(_OtpSendOrNot value) otpSendOrNot,
     required TResult Function(_GetMobileNumber value) getMobileNumber,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
   }) {
@@ -639,6 +965,8 @@ class _$_GetOtp implements _GetOtp {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
   }) {
@@ -651,6 +979,8 @@ class _$_GetOtp implements _GetOtp {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
     required TResult orElse(),
@@ -715,6 +1045,8 @@ class _$_ResendOtp implements _ResendOtp {
     required TResult Function() started,
     required TResult Function(bool otpSendOrNot) otpSendOrNot,
     required TResult Function(String mobileNumber) getMobileNumber,
+    required TResult Function() verifyPhone,
+    required TResult Function() verifyOtp,
     required TResult Function(String otp) getOtp,
     required TResult Function() resendOtp,
   }) {
@@ -727,6 +1059,8 @@ class _$_ResendOtp implements _ResendOtp {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
   }) {
@@ -739,6 +1073,8 @@ class _$_ResendOtp implements _ResendOtp {
     TResult Function()? started,
     TResult Function(bool otpSendOrNot)? otpSendOrNot,
     TResult Function(String mobileNumber)? getMobileNumber,
+    TResult Function()? verifyPhone,
+    TResult Function()? verifyOtp,
     TResult Function(String otp)? getOtp,
     TResult Function()? resendOtp,
     required TResult orElse(),
@@ -755,6 +1091,8 @@ class _$_ResendOtp implements _ResendOtp {
     required TResult Function(_Started value) started,
     required TResult Function(_OtpSendOrNot value) otpSendOrNot,
     required TResult Function(_GetMobileNumber value) getMobileNumber,
+    required TResult Function(_VerifyPhone value) verifyPhone,
+    required TResult Function(_VerifyOtp value) verifyOtp,
     required TResult Function(_GetOtp value) getOtp,
     required TResult Function(_ResendOtp value) resendOtp,
   }) {
@@ -767,6 +1105,8 @@ class _$_ResendOtp implements _ResendOtp {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
   }) {
@@ -779,6 +1119,8 @@ class _$_ResendOtp implements _ResendOtp {
     TResult Function(_Started value)? started,
     TResult Function(_OtpSendOrNot value)? otpSendOrNot,
     TResult Function(_GetMobileNumber value)? getMobileNumber,
+    TResult Function(_VerifyPhone value)? verifyPhone,
+    TResult Function(_VerifyOtp value)? verifyOtp,
     TResult Function(_GetOtp value)? getOtp,
     TResult Function(_ResendOtp value)? resendOtp,
     required TResult orElse(),
@@ -802,8 +1144,18 @@ mixin _$AuthenticationState {
   TextEditingController get otpController => throw _privateConstructorUsedError;
   OtpTimerButtonController get otpTimercontroller =>
       throw _privateConstructorUsedError;
+  Option<Either<Failures, String>> get productFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
+  Option<Either<Failures, String>> get cartFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
   String get mobileNumber => throw _privateConstructorUsedError;
   String get otp => throw _privateConstructorUsedError;
+  FirebaseAuth get auth => throw _privateConstructorUsedError;
+  bool get otpVisibility => throw _privateConstructorUsedError;
+  String get verificationId => throw _privateConstructorUsedError;
+  User? get user => throw _privateConstructorUsedError;
+  String get response1 => throw _privateConstructorUsedError;
+  String get response2 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AuthenticationStateCopyWith<AuthenticationState> get copyWith =>
@@ -820,8 +1172,16 @@ abstract class $AuthenticationStateCopyWith<$Res> {
       TextEditingController mobileNumberController,
       TextEditingController otpController,
       OtpTimerButtonController otpTimercontroller,
+      Option<Either<Failures, String>> productFailureOrSuccessOption,
+      Option<Either<Failures, String>> cartFailureOrSuccessOption,
       String mobileNumber,
-      String otp});
+      String otp,
+      FirebaseAuth auth,
+      bool otpVisibility,
+      String verificationId,
+      User? user,
+      String response1,
+      String response2});
 }
 
 /// @nodoc
@@ -839,8 +1199,16 @@ class _$AuthenticationStateCopyWithImpl<$Res>
     Object? mobileNumberController = freezed,
     Object? otpController = freezed,
     Object? otpTimercontroller = freezed,
+    Object? productFailureOrSuccessOption = freezed,
+    Object? cartFailureOrSuccessOption = freezed,
     Object? mobileNumber = freezed,
     Object? otp = freezed,
+    Object? auth = freezed,
+    Object? otpVisibility = freezed,
+    Object? verificationId = freezed,
+    Object? user = freezed,
+    Object? response1 = freezed,
+    Object? response2 = freezed,
   }) {
     return _then(_value.copyWith(
       otpSendOrNot: otpSendOrNot == freezed
@@ -859,6 +1227,14 @@ class _$AuthenticationStateCopyWithImpl<$Res>
           ? _value.otpTimercontroller
           : otpTimercontroller // ignore: cast_nullable_to_non_nullable
               as OtpTimerButtonController,
+      productFailureOrSuccessOption: productFailureOrSuccessOption == freezed
+          ? _value.productFailureOrSuccessOption
+          : productFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failures, String>>,
+      cartFailureOrSuccessOption: cartFailureOrSuccessOption == freezed
+          ? _value.cartFailureOrSuccessOption
+          : cartFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failures, String>>,
       mobileNumber: mobileNumber == freezed
           ? _value.mobileNumber
           : mobileNumber // ignore: cast_nullable_to_non_nullable
@@ -866,6 +1242,30 @@ class _$AuthenticationStateCopyWithImpl<$Res>
       otp: otp == freezed
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as FirebaseAuth,
+      otpVisibility: otpVisibility == freezed
+          ? _value.otpVisibility
+          : otpVisibility // ignore: cast_nullable_to_non_nullable
+              as bool,
+      verificationId: verificationId == freezed
+          ? _value.verificationId
+          : verificationId // ignore: cast_nullable_to_non_nullable
+              as String,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User?,
+      response1: response1 == freezed
+          ? _value.response1
+          : response1 // ignore: cast_nullable_to_non_nullable
+              as String,
+      response2: response2 == freezed
+          ? _value.response2
+          : response2 // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -883,8 +1283,16 @@ abstract class _$$_AuthenticationStateCopyWith<$Res>
       TextEditingController mobileNumberController,
       TextEditingController otpController,
       OtpTimerButtonController otpTimercontroller,
+      Option<Either<Failures, String>> productFailureOrSuccessOption,
+      Option<Either<Failures, String>> cartFailureOrSuccessOption,
       String mobileNumber,
-      String otp});
+      String otp,
+      FirebaseAuth auth,
+      bool otpVisibility,
+      String verificationId,
+      User? user,
+      String response1,
+      String response2});
 }
 
 /// @nodoc
@@ -904,8 +1312,16 @@ class __$$_AuthenticationStateCopyWithImpl<$Res>
     Object? mobileNumberController = freezed,
     Object? otpController = freezed,
     Object? otpTimercontroller = freezed,
+    Object? productFailureOrSuccessOption = freezed,
+    Object? cartFailureOrSuccessOption = freezed,
     Object? mobileNumber = freezed,
     Object? otp = freezed,
+    Object? auth = freezed,
+    Object? otpVisibility = freezed,
+    Object? verificationId = freezed,
+    Object? user = freezed,
+    Object? response1 = freezed,
+    Object? response2 = freezed,
   }) {
     return _then(_$_AuthenticationState(
       otpSendOrNot: otpSendOrNot == freezed
@@ -924,6 +1340,14 @@ class __$$_AuthenticationStateCopyWithImpl<$Res>
           ? _value.otpTimercontroller
           : otpTimercontroller // ignore: cast_nullable_to_non_nullable
               as OtpTimerButtonController,
+      productFailureOrSuccessOption: productFailureOrSuccessOption == freezed
+          ? _value.productFailureOrSuccessOption
+          : productFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failures, String>>,
+      cartFailureOrSuccessOption: cartFailureOrSuccessOption == freezed
+          ? _value.cartFailureOrSuccessOption
+          : cartFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failures, String>>,
       mobileNumber: mobileNumber == freezed
           ? _value.mobileNumber
           : mobileNumber // ignore: cast_nullable_to_non_nullable
@@ -931,6 +1355,30 @@ class __$$_AuthenticationStateCopyWithImpl<$Res>
       otp: otp == freezed
           ? _value.otp
           : otp // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as FirebaseAuth,
+      otpVisibility: otpVisibility == freezed
+          ? _value.otpVisibility
+          : otpVisibility // ignore: cast_nullable_to_non_nullable
+              as bool,
+      verificationId: verificationId == freezed
+          ? _value.verificationId
+          : verificationId // ignore: cast_nullable_to_non_nullable
+              as String,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User?,
+      response1: response1 == freezed
+          ? _value.response1
+          : response1 // ignore: cast_nullable_to_non_nullable
+              as String,
+      response2: response2 == freezed
+          ? _value.response2
+          : response2 // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -944,8 +1392,16 @@ class _$_AuthenticationState implements _AuthenticationState {
       required this.mobileNumberController,
       required this.otpController,
       required this.otpTimercontroller,
+      required this.productFailureOrSuccessOption,
+      required this.cartFailureOrSuccessOption,
       required this.mobileNumber,
-      required this.otp});
+      required this.otp,
+      required this.auth,
+      required this.otpVisibility,
+      required this.verificationId,
+      this.user,
+      required this.response1,
+      required this.response2});
 
   @override
   final bool otpSendOrNot;
@@ -956,13 +1412,29 @@ class _$_AuthenticationState implements _AuthenticationState {
   @override
   final OtpTimerButtonController otpTimercontroller;
   @override
+  final Option<Either<Failures, String>> productFailureOrSuccessOption;
+  @override
+  final Option<Either<Failures, String>> cartFailureOrSuccessOption;
+  @override
   final String mobileNumber;
   @override
   final String otp;
+  @override
+  final FirebaseAuth auth;
+  @override
+  final bool otpVisibility;
+  @override
+  final String verificationId;
+  @override
+  final User? user;
+  @override
+  final String response1;
+  @override
+  final String response2;
 
   @override
   String toString() {
-    return 'AuthenticationState(otpSendOrNot: $otpSendOrNot, mobileNumberController: $mobileNumberController, otpController: $otpController, otpTimercontroller: $otpTimercontroller, mobileNumber: $mobileNumber, otp: $otp)';
+    return 'AuthenticationState(otpSendOrNot: $otpSendOrNot, mobileNumberController: $mobileNumberController, otpController: $otpController, otpTimercontroller: $otpTimercontroller, productFailureOrSuccessOption: $productFailureOrSuccessOption, cartFailureOrSuccessOption: $cartFailureOrSuccessOption, mobileNumber: $mobileNumber, otp: $otp, auth: $auth, otpVisibility: $otpVisibility, verificationId: $verificationId, user: $user, response1: $response1, response2: $response2)';
   }
 
   @override
@@ -978,9 +1450,22 @@ class _$_AuthenticationState implements _AuthenticationState {
                 .equals(other.otpController, otpController) &&
             const DeepCollectionEquality()
                 .equals(other.otpTimercontroller, otpTimercontroller) &&
+            const DeepCollectionEquality().equals(
+                other.productFailureOrSuccessOption,
+                productFailureOrSuccessOption) &&
+            const DeepCollectionEquality().equals(
+                other.cartFailureOrSuccessOption, cartFailureOrSuccessOption) &&
             const DeepCollectionEquality()
                 .equals(other.mobileNumber, mobileNumber) &&
-            const DeepCollectionEquality().equals(other.otp, otp));
+            const DeepCollectionEquality().equals(other.otp, otp) &&
+            const DeepCollectionEquality().equals(other.auth, auth) &&
+            const DeepCollectionEquality()
+                .equals(other.otpVisibility, otpVisibility) &&
+            const DeepCollectionEquality()
+                .equals(other.verificationId, verificationId) &&
+            const DeepCollectionEquality().equals(other.user, user) &&
+            const DeepCollectionEquality().equals(other.response1, response1) &&
+            const DeepCollectionEquality().equals(other.response2, response2));
   }
 
   @override
@@ -990,8 +1475,16 @@ class _$_AuthenticationState implements _AuthenticationState {
       const DeepCollectionEquality().hash(mobileNumberController),
       const DeepCollectionEquality().hash(otpController),
       const DeepCollectionEquality().hash(otpTimercontroller),
+      const DeepCollectionEquality().hash(productFailureOrSuccessOption),
+      const DeepCollectionEquality().hash(cartFailureOrSuccessOption),
       const DeepCollectionEquality().hash(mobileNumber),
-      const DeepCollectionEquality().hash(otp));
+      const DeepCollectionEquality().hash(otp),
+      const DeepCollectionEquality().hash(auth),
+      const DeepCollectionEquality().hash(otpVisibility),
+      const DeepCollectionEquality().hash(verificationId),
+      const DeepCollectionEquality().hash(user),
+      const DeepCollectionEquality().hash(response1),
+      const DeepCollectionEquality().hash(response2));
 
   @JsonKey(ignore: true)
   @override
@@ -1006,8 +1499,18 @@ abstract class _AuthenticationState implements AuthenticationState {
       required final TextEditingController mobileNumberController,
       required final TextEditingController otpController,
       required final OtpTimerButtonController otpTimercontroller,
+      required final Option<Either<Failures, String>>
+          productFailureOrSuccessOption,
+      required final Option<Either<Failures, String>>
+          cartFailureOrSuccessOption,
       required final String mobileNumber,
-      required final String otp}) = _$_AuthenticationState;
+      required final String otp,
+      required final FirebaseAuth auth,
+      required final bool otpVisibility,
+      required final String verificationId,
+      final User? user,
+      required final String response1,
+      required final String response2}) = _$_AuthenticationState;
 
   @override
   bool get otpSendOrNot;
@@ -1018,9 +1521,25 @@ abstract class _AuthenticationState implements AuthenticationState {
   @override
   OtpTimerButtonController get otpTimercontroller;
   @override
+  Option<Either<Failures, String>> get productFailureOrSuccessOption;
+  @override
+  Option<Either<Failures, String>> get cartFailureOrSuccessOption;
+  @override
   String get mobileNumber;
   @override
   String get otp;
+  @override
+  FirebaseAuth get auth;
+  @override
+  bool get otpVisibility;
+  @override
+  String get verificationId;
+  @override
+  User? get user;
+  @override
+  String get response1;
+  @override
+  String get response2;
   @override
   @JsonKey(ignore: true)
   _$$_AuthenticationStateCopyWith<_$_AuthenticationState> get copyWith =>

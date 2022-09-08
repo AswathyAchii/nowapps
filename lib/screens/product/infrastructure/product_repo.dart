@@ -21,6 +21,7 @@ class ProductRepo extends IProductRepo {
   static const deleteProductFromCART = "DELETE_PROD_CART";
   static const displayPRODUCT = "DISP_PRODUCT";
   static const displayProductinCART = "GET_CART_PRODUCTS";
+  static const deleteAllProFromCart = "DELETE_ALL_PRO";
 
   //----------------- ADD PRODUCT TO CART ----------------------//
   @override
@@ -148,6 +149,24 @@ class ProductRepo extends IProductRepo {
       map['action'] = updateCARTQuantity;
       map['cartId'] = cartID.toString();
       map['quantity'] = quantity.toString();
+      final response = await http.post(Uri.parse(root), body: map);
+      if (response.statusCode == 200 || response.statusCode == 201) {
+        print(response.body);
+        return Right(response.body);
+      } else {
+        return const Left(ProductFailures.serverNotResponding());
+      }
+    } catch (e) {
+      print(e);
+      return const Left(ProductFailures.netWorkError());
+    }
+  }
+
+  @override
+  Future<Either<ProductFailures, String>> deleteAllProductsFromCart() async {
+    try {
+      var map = <String, dynamic>{};
+      map['action'] = deleteAllProFromCart;
       final response = await http.post(Uri.parse(root), body: map);
       if (response.statusCode == 200 || response.statusCode == 201) {
         print(response.body);

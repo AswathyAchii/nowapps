@@ -1,10 +1,12 @@
 import 'package:dartz/dartz.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:now_apps/screens/product/domain/failure/product_failures.dart';
 import 'package:now_apps/screens/product/domain/irepo/i_product_repo.dart';
 import 'package:now_apps/screens/product/domain/model/cart/cart_model.dart';
 import 'package:now_apps/screens/product/domain/model/products/product_data_model.dart';
+import 'package:now_apps/screens/product/presentation/cart_page.dart';
 
 part 'product_event.dart';
 part 'product_state.dart';
@@ -14,7 +16,37 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
   final IProductRepo iHomeRepo;
   ProductBloc(this.iHomeRepo) : super(ProductState.initial()) {
     on<_Started>((event, emit) {
-      emit(state.copyWith(retailerID: '0'));
+      emit(state.copyWith(
+          productsOrNot: true,
+          productFailureOrSuccessOption: none(),
+          retailerID: '',
+          displayCartButton: false,
+          cartItemItemQuantity: 0,
+          cartFailureOrSuccessOption: none(),
+          isCartLoading: true,
+          isProductLoading: true,
+          apiResponse: '',
+          cartId: 0,
+          orederId: 0,
+          totalProductPrice: 0,
+          opinionController: TextEditingController(),
+          opinion1: '',
+          opinion2: '',
+          opinion3: '',
+          opinion: ''));
+    });
+    // --------- Get Opinion---------//
+    on<_GetOpinion1>((event, emit) {
+      emit(state.copyWith(
+          opinion: event.opinion + event.opinion1, opinion1: event.opinion1));
+    });
+    on<_GetOpinion2>((event, emit) {
+      emit(state.copyWith(
+          opinion: state.opinion + event.opinion2, opinion2: event.opinion2));
+    });
+    on<_GetOpinion3>((event, emit) {
+      emit(state.copyWith(
+          opinion: state.opinion + event.opinion3, opinion3: event.opinion3));
     });
     // --------- Product Page Or Not---------//
     on<_ProductPageOrNot>((event, emit) {
@@ -63,7 +95,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       final data = await iHomeRepo.updateQuantityOfProductInCart(
         cartID: event.cartId,
         quantity: event.quantity,
-        productPrice: event.productPrice,
+        productPrice: event.productPrice * event.quantity,
       );
       emit(
         data.fold(
@@ -71,10 +103,10 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
                   productFailureOrSuccessOption: none(),
                   cartFailureOrSuccessOption: some(Left(l)),
                 ), (r) {
+          int sum = 0;
+          sum = sum + state.totalProductPrice + event.productPrice;
           return state.copyWith(
-            isCartLoading: false,
-            apiResponse: r,
-          );
+              isCartLoading: false, apiResponse: r, totalProductPrice: sum);
         }),
       );
     });
@@ -85,7 +117,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
         final data = await iHomeRepo.updateQuantityOfProductInCart(
           cartID: event.cartId,
           quantity: event.quantity,
-          productPrice: event.productPrice,
+          productPrice: event.productPrice * event.quantity,
         );
         emit(
           data.fold(
@@ -93,10 +125,10 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
                     productFailureOrSuccessOption: none(),
                     cartFailureOrSuccessOption: some(Left(l)),
                   ), (r) {
+            int sum = 0;
+            sum = sum + state.totalProductPrice + event.productPrice;
             return state.copyWith(
-              isCartLoading: false,
-              apiResponse: r,
-            );
+                isCartLoading: false, apiResponse: r, totalProductPrice: sum);
           }),
         );
       } else {
@@ -130,12 +162,28 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
                 ), (r) {
           int sum = 0;
           for (int i = 0; i < r.length; i++) {
-            sum = sum + int.parse(r[1].productPrice);
+            sum =
+                sum + (int.parse(r[i].productPrice) * int.parse(r[i].quantity));
           }
           return state.copyWith(
             isCartLoading: false,
             cartDataModel: r,
             totalProductPrice: sum,
+          );
+        }),
+      );
+    });
+    // --------- Delete all product from cart---------//
+    on<_DeleteAllCartProducts>((event, emit) async {
+      final data = await iHomeRepo.deleteAllProductsFromCart();
+      emit(
+        data.fold(
+            (l) => state.copyWith(
+                  cartFailureOrSuccessOption: none(),
+                  productFailureOrSuccessOption: some(Left(l)),
+                ), (r) {
+          return state.copyWith(
+            isProductLoading: false,
           );
         }),
       );

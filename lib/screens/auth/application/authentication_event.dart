@@ -9,6 +9,9 @@ class AuthenticationEvent with _$AuthenticationEvent {
   const factory AuthenticationEvent.getMobileNumber({
     required String mobileNumber,
   }) = _GetMobileNumber;
+  const factory AuthenticationEvent.verifyPhone() = _VerifyPhone;
+  const factory AuthenticationEvent.verifyOtp() = _VerifyOtp;
+
   const factory AuthenticationEvent.getOtp({
     required String otp,
   }) = _GetOtp;

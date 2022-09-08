@@ -15,6 +15,8 @@ import 'package:http/http.dart' as http;
 class HomeRepo extends IHomeRepo {
   static const root = "http://192.168.0.103/rest_api/rest_api.php";
   static const getAllRETAILERS = "GET_ALL_RETAILERS";
+  static const addUserintoTable = "ADD_USER";
+  static const addFeedbackIntoTable = "ADD_USER_FEEDBACK";
   @override
   Future<Either<Failures, List<RetailerDataModel>>> getRetailers() async {
     try {
@@ -44,5 +46,51 @@ class HomeRepo extends IHomeRepo {
     final parsed = json.decode(responseBody).cast<Map<String, dynamic>>();
     return parsed
         .map<RetailerDataModel>((json) => RetailerDataModel.fromJson(json));
+  }
+
+  @override
+  Future<Either<Failures, String>> addFeedback(
+      {required String mobileNumber,
+      required String checkInTime,
+      required String checkOutTime,
+      required String feedBack}) async {
+    try {
+      var map = <String, dynamic>{};
+      map['action'] = addFeedbackIntoTable;
+      map['productId'] = mobileNumber;
+      map['retailerId'] = checkInTime;
+      map['cartId'] = checkOutTime;
+      map['orderId'] = feedBack;
+      final response = await http.post(Uri.parse(root), body: map);
+      if (response.statusCode == 200 || response.statusCode == 201) {
+        print(response.body);
+        return Right(response.body);
+      } else {
+        return const Left(Failures.serverNotResponding());
+      }
+    } catch (e) {
+      print(e);
+      return const Left(Failures.netWorkError());
+    }
+  }
+
+  @override
+  Future<Either<Failures, String>> addUser(
+      {required String mobileNumber}) async {
+    try {
+      var map = <String, dynamic>{};
+      map['action'] = addUserintoTable;
+      map['productId'] = mobileNumber;
+      final response = await http.post(Uri.parse(root), body: map);
+      if (response.statusCode == 200 || response.statusCode == 201) {
+        print(response.body);
+        return Right(response.body);
+      } else {
+        return const Left(Failures.serverNotResponding());
+      }
+    } catch (e) {
+      print(e);
+      return const Left(Failures.netWorkError());
+    }
   }
 }

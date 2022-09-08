@@ -15,7 +15,7 @@ class AppWidget extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<AuthenticationBloc>(
-          create: (BuildContext context) => AuthenticationBloc(),
+          create: (BuildContext context) => AuthenticationBloc(HomeRepo()),
         ),
         BlocProvider<ProductBloc>(
           create: (BuildContext context) => ProductBloc(ProductRepo()),
